@@ -3,29 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialidades Dentales SEO | Prótesis y Ortopedia en Sucre</title>
+    <title>Especialidades Dentales | Prótesis y Ortopedia Sucre</title>
     <style>
-        .service-grid { padding: 40px 10%; }
-        .item { display: flex; gap: 30px; margin-bottom: 50px; align-items: center; flex-wrap: wrap; }
-        .item img { width: 300px; height: 200px; border-radius: 15px; object-fit: cover; }
-        .text { flex: 1; min-width: 300px; }
-        h2 { color: #0a3d62; border-bottom: 2px solid #b38b4d; display: inline-block; }
+        /* Estilos de Nav idénticos a los anteriores */
+        :root { --blue: #0a3d62; --gold: #b38b4d; }
+        body { font-family: sans-serif; margin: 0; }
+        .main-nav { background: var(--blue); padding: 15px 5%; display: flex; flex-direction: column; align-items: center; }
+        .logo { color: white; text-decoration: none; font-weight: bold; margin-bottom: 10px; }
+        .nav-links a { color: white; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+
+        .service-grid { padding: 40px 20px; max-width: 1000px; margin: auto; }
+        .item { display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px; background: #fff; border-bottom: 1px solid #eee; padding-bottom: 30px; }
+        .item img { width: 100%; height: 250px; border-radius: 15px; object-fit: cover; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .text h2 { color: var(--blue); font-size: 1.5rem; margin-top: 10px; }
+        
+        @media (min-width: 768px) {
+            .main-nav { flex-direction: row; justify-content: space-between; }
+            .item { flex-direction: row; align-items: center; }
+            .item img { width: 350px; height: 250px; }
+        }
     </style>
 </head>
 <body>
+    <nav class="main-nav">
+        <a href="index.html" class="logo">Moisés Rosario <span style="color:var(--gold)">Lab</span></a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Trayectoria</a>
+            <a href="servicios.html">Especialidades</a>
+            <a href="contacto.html">Ubicación</a>
+        </div>
+    </nav>
     <div class="service-grid">
         <div class="item">
-            <img src="../img/rehabilitacion.jpeg" alt="Rehabilitación Oral">
+            <img src="../img/rehabilitacion.jpeg" alt="Rehabilitación Oral Carúpano">
             <div class="text">
-                <h2>Rehabilitación Protésica Avanzada</h2>
-                <p>Utilizamos exclusivamente <strong>metacrilatos de las líneas Dentalix y Acripoll</strong>, garantizando una porosidad nula que previene la acumulación bacteriana y asegura estabilidad cromática. Incluimos caracterización gingival avanzada en cada pieza.</p>
+                <h2>Rehabilitación Protésica</h2>
+                <p>Implementamos <strong>polímeros de alta densidad</strong> (Dentalix/Acripoll) con porosidad nula. Esto garantiza una estética natural y una durabilidad superior frente a los ácidos orales.</p>
             </div>
         </div>
         <div class="item">
-            <img src="../img/ortopedia.jpeg" alt="Ortopedia Funcional">
+            <img src="../img/ortopedia.jpeg" alt="Ortopedia SN1 SN2">
             <div class="text">
-                <h2>Ortopedia Funcional y Ortodoncia Interceptiva</h2>
-                <p>Confeccionamos dispositivos como <strong>aparatos SN1, SN2 y sistemas Bimler</strong>, diseñados bajo estrictos parámetros de análisis cefalométrico para ofrecer fuerzas controladas y resultados predecibles.</p>
+                <h2>Ortopedia Funcional</h2>
+                <p>Confección de dispositivos <strong>SN1, SN2 y Bimler</strong> bajo análisis cefalométrico. Diseñados para una adaptación inmediata y mínima molestia para el paciente pediátrico.</p>
             </div>
         </div>
     </div>
