@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moisés Rosario | Ingeniería Dental de Vanguardia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --blue-deep: #0d2438;
+            --blue-light: #162e44;
+            --gold: #c5a059;
+            --white: #ffffff;
+            --text-gray: #555;
+        }
 
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; background-color: #f0f2f5; color: var(--blue-deep); }
+
+        /* HEADER & NAV */
+        header { 
+            background: var(--blue-deep); 
+            padding: 20px 8%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+        .logo span { color: var(--gold); }
+        nav { display: flex; gap: 20px; }
+        nav a { color: white; text-decoration: none; font-size: 0.9rem; opacity: 0.8; transition: 0.3s; }
+        nav a:hover { color: var(--gold); opacity: 1; }
+
+        /* SECCIÓN HERO (AZUL) */
+        .hero-section {
+            background: var(--blue-deep);
+            background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0%, transparent 20%),
+                              radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 0%, transparent 20%);
+            padding: 60px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .hero-content h1 { color: white; font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .hero-content p { color: rgba(255,255,255,0.8); margin-bottom: 30px; font-size: 1.1rem; }
+        
+        /* BOTÓN DORADO */
+        .btn-gold { 
+            background: var(--gold); 
+            color: var(--blue-deep); 
+            padding: 12px 25px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 5px;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        /* TARJETAS DE SERVICIO (LADO DERECHO HERO) */
+        .services-preview { display: flex; flex-direction: column; gap: 20px; }
+        
+        .mini-card {
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            overflow: hidden;
+            height: 140px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .mini-card-info { padding: 20px; flex: 1; }
+        .mini-card-info h3 { font-size: 1.1rem; color: var(--blue-deep); margin-bottom: 5px; }
+        .mini-card-info p { font-size: 0.8rem; color: var(--text-gray); }
+        
+        /* CORTE DIAGONAL DE IMAGEN */
+        .mini-card-img {
+            width: 40%;
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        /* SECCIÓN INFERIOR (BLANCA) */
+        .main-content {
+            background: white;
+            padding: 60px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .intro-text h2 { font-size: 2rem; color: var(--blue-deep); margin-bottom: 20px; }
+        .intro-text p { color: var(--text-gray); margin-bottom: 30px; line-height: 1.6; }
+
+        /* VALORES (ICONOS DORADOS) */
+        .values-list { list-style: none; }
+        .values-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-weight: 600; }
+        .values-list li i { color: var(--gold); font-size: 1.2rem; }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 40px; background: #eee; font-size: 0.8rem; color: #888; }
+
+        /* RESPONSIVO */
+        @media (max-width: 992px) {
+            .hero-section, .main-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-content h1 { font-size: 2rem; }
+            .mini-card { height: auto; flex-direction: column; }
+            .mini-card-img { width: 100%; height: 150px; clip-path: none; }
+            .values-list li { justify-content: center; }
+            nav { justify-content: center; width: 100%; margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Moisés Rosario<span>.Lab</span></a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Ubicación</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Ingeniería con la Precisión y Dental a su Alcance</h1>
+            <p>Laboratorio especializado en alta mecánica funcional en Carúpano. Innovación constante para resultados predecibles.</p>
+            <a href="servicios.html" class="btn-gold">Ver Servicios</a>
+        </div>
+        
+        <div class="services-preview">
+            <div class="mini-card">
+                <div class="mini-card-info">
+                    <h3>Rehabilitación Protésica</h3>
+                    <p>Uso de acrílicos Dentalix y Acripoll de alta gama.</p>
+                    <a href="servicios.html" class="btn-gold" style="padding: 5px 10px; font-size: 0.6rem; margin-top: 10px;">Más detalles</a>
+                </div>
+                <div class="mini-card-img" style="background-image: url('../img/rehabilitacion.jpeg');"></div>
+            </div>
+            
+            <div class="mini-card">
+                <div class="mini-card-info">
+                    <h3>Ortopedia Funcional</h3>
+                    <p>Aparatos SN1, SN2 y sistemas Bimler de alta precisión.</p>
+                    <a href="servicios.html" class="btn-gold" style="padding: 5px 10px; font-size: 0.6rem; margin-top: 10px;">Más detalles</a>
+                </div>
+                <div class="mini-card-img" style="background-image: url('../img/ortopedia.jpeg');"></div>
+            </div>
+
+            <div class="mini-card">
+                <div class="mini-card-info">
+                    <h3>Especialidades Avanzadas</h3>
+                    <p>NAM (LPH), Férulas Michigan y aparatología específica.</p>
+                    <a href="servicios.html" class="btn-gold" style="padding: 5px 10px; font-size: 0.6rem; margin-top: 10px;">Más detalles</a>
+                </div>
+                <div class="mini-card-img" style="background-image: url('../img/especialidades.jpeg');"></div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="intro-text">
+            <h2>Servicios de Élite</h2>
+            <p>Nuestra trayectoria dental une la mecánica funcional con materiales de grado médico. Optimizamos el flujo de trabajo para clínicas en todo el Estado Sucre.</p>
+            
+            <ul class="values-list">
+                <li><i class="fas fa-check-circle"></i> Integridad de Materiales Certificados</li>
+                <li><i class="fas fa-check-circle"></i> Protocolo Zero-Error en Prótesis</li>
+                <li><i class="fas fa-check-circle"></i> Entrega Garantizada en 7 Días</li>
+                <li><i class="fas fa-check-circle"></i> Soporte Técnico Especializado</li>
+            </ul>
+        </div>
+
+        <div class="about-ceo-preview" style="display: flex; align-items: center; justify-content: center;">
+            <div style="text-align: center; border: 2px solid var(--gold); padding: 30px; border-radius: 20px;">
+                <h3 style="color: var(--blue-deep)">Moisés Rosario</h3>
+                <p style="color: var(--gold); font-weight: bold; margin-bottom: 15px;">CEO & Director Técnico</p>
+                <p style="font-size: 0.9rem; color: var(--text-gray)">Liderando la mecánica dental en el Eje de Paria con precisión y compromiso profesional.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Moisés Rosario - Mecánica Dental Avanzada | Carúpano, Venezuela
+    </footer>
+
+</body>
+</html>
