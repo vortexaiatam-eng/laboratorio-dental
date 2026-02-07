@@ -3,18 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubicación y Logística GEO | Carúpano, Sucre</title>
+    <title>Ubicación y Logística | Carúpano, Sucre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos de Nav idénticos */
+        :root { --blue: #0a3d62; --gold: #b38b4d; }
+        body { font-family: sans-serif; margin: 0; background: #f8f9fa; }
+        .main-nav { background: var(--blue); padding: 15px 5%; display: flex; flex-direction: column; align-items: center; }
+        .logo { color: white; text-decoration: none; font-weight: bold; margin-bottom: 10px; }
+        .nav-links a { color: white; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+
+        .geo-container { padding: 40px 20px; text-align: center; }
+        .info-card { background: white; padding: 30px 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: inline-block; text-align: left; max-width: 500px; width: 100%; }
+        .info-card i { color: var(--blue); margin-right: 10px; width: 20px; }
+        .wa-btn { background: #25D366; color: white; padding: 15px; display: block; text-align: center; text-decoration: none; border-radius: 10px; font-weight: bold; margin-top: 25px; transition: 0.3s; }
+        .wa-btn:hover { background: #128C7E; }
+
+        @media (min-width: 768px) {
+            .main-nav { flex-direction: row; justify-content: space-between; }
+        }
+    </style>
 </head>
 <body>
-    <div style="padding: 60px 10%; text-align: center;">
-        <h1 style="color:#0a3d62;">Conectividad en el Eje de Paria</h1>
-        <p>Ubicados estratégicamente en el corazón de <strong>Carúpano</strong>, facilitamos la logística para las clínicas del Municipio Bermúdez.</p>
-        
-        <div style="background:#f4f7f6; padding: 40px; border-radius: 20px; display: inline-block; text-align: left;">
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Sede Física:</strong> Calle San Felix, Edificio Sahara, Piso 2, Local 2-4.</p>
-            <p><i class="fas fa-truck"></i> <strong>Cobertura Regional:</strong> Envíos a Cumaná, Río Caribe, Casanay, El Pilar y Güiria.</p>
-            <p><i class="fas fa-phone"></i> <strong>Atención:</strong> +58 424-8121610</p>
-            <a href="https://wa.me/584248121610" style="background:#25D366; color:white; padding:15px; display:block; text-align:center; text-decoration:none; border-radius:5px; font-weight:bold;">Contactar por WhatsApp</a>
+    <nav class="main-nav">
+        <a href="index.html" class="logo">Moisés Rosario <span style="color:var(--gold)">Lab</span></a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Trayectoria</a>
+            <a href="servicios.html">Especialidades</a>
+            <a href="contacto.html">Ubicación</a>
+        </div>
+    </nav>
+    <div class="geo-container">
+        <h1 style="color:var(--blue);">Logística y Alcance Regional</h1>
+        <div class="info-card">
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Sede:</strong> Calle San Felix, Edificio Sahara, Piso 2, Local 2-4. Carúpano, Sucre.</p>
+            <p><i class="fas fa-truck"></i> <strong>Envíos:</strong> Cobertura en Cumaná, Río Caribe, Casanay y resto del Estado Sucre.</p>
+            <p><i class="fas fa-phone-alt"></i> <strong>Contacto:</strong> +58 424-8121610</p>
+            <a href="https://wa.me/584248121610" class="wa-btn"><i class="fab fa-whatsapp"></i> Contactar vía WhatsApp</a>
         </div>
     </div>
 </body>
