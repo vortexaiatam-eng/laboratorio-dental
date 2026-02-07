@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moisés Rosario | Laboratorio Dental Elite Carúpano</title>
+    <title>Moisés Rosario | Laboratorio de Mecánica Dental de Élite</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --dark: #1a1a1a; --gold: #c5a059; --white: #ffffff; --text: #444; }
-        body { font-family: 'Playfair Display', serif; margin: 0; background: var(--white); color: var(--text); }
-        nav { padding: 20px; text-align: center; background: var(--dark); }
-        nav a { color: var(--gold); margin: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
-        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/Sobrenosotros.webp'); background-size: cover; color: white; }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; color: var(--gold); }
-        .btn-gold { border: 1px solid var(--gold); color: var(--gold); padding: 15px 30px; text-decoration: none; margin-top: 20px; transition: 0.3s; }
-        .btn-gold:hover { background: var(--gold); color: var(--dark); }
+        :root { --blue: #0a3d62; --gold: #b38b4d; --light: #f4f7f6; --white: #ffffff; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; }
+        .main-nav { background: var(--blue); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { color: white; font-weight: bold; font-size: 1.2rem; text-decoration: none; text-transform: uppercase; }
+        .logo span { color: var(--gold); }
+        .nav-links a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .hero { height: 70vh; background: linear-gradient(rgba(10, 61, 98, 0.8), rgba(10, 61, 98, 0.8)), url('../img/Sobrenosotros.webp'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 0 20px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .btn-gold { background: var(--gold); color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; }
+        footer { background: #1a1a1a; color: #777; text-align: center; padding: 20px; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios Especializados</a>
-        <a href="nosotros.html">Trayectoria Profesional</a>
-        <a href="contacto.html">Ubicación y Envíos</a>
+    <nav class="main-nav">
+        <a href="index.html" class="logo">Moisés Rosario <span>Lab</span></a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Trayectoria</a>
+            <a href="servicios.html">Especialidades</a>
+            <a href="contacto.html">Ubicación</a>
+        </div>
     </nav>
     <section class="hero">
-        <h1>Moisés Rosario</h1>
-        <p>Alta Mecánica Dental • Precisión de Vanguardia</p>
-        <a href="servicios.html" class="btn-gold">Explorar Especialidades</a>
+        <h1>Ingeniería Dental a su Alcance</h1>
+        <p>Soluciones protésicas de alta precisión para odontólogos que no aceptan menos que la perfección.</p>
+        <a href="servicios.html" class="btn-gold">Ver Especialidades</a>
     </section>
+    <footer>© 2026 Moisés Rosario - Mecánica Dental Avanzada</footer>
 </body>
 </html>
