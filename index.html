@@ -7,62 +7,63 @@
     <meta name="description" content="Especialista en prótesis Dentalix, Acripoll y ortopedia funcional en Carúpano. Servicio nacional por mensajería. Precisión en 1 semana.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --azul-profundo: #0056b3; --azul-claro: #eef6ff; --blanco: #ffffff; --gris-oscuro: #333; --gris-suave: #f4f7f6; }
+        :root { --azul-profundo: #0056b3; --azul-claro: #eef6ff; --blanco: #ffffff; --gris-oscuro: #333; --gris-suave: #f4f7f6; --verde-wa: #25D366; }
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; color: var(--gris-oscuro); line-height: 1.6; scroll-behavior: smooth; }
-
-        .about-img {
-        flex: 1;
-        min-width: 300px;
-        max-width: 450px; /* Esto evita que sea gigante en pantallas grandes */
-        height: 350px;    /* Altura fija para controlarla mejor */
-        object-fit: cover; /* Recorta la imagen para que encaje perfectamente sin estirarse */
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        display: block;
-        margin: 0 auto;   /* La centra si el texto se mueve abajo */
-        }
         
         /* Navegación */
         header { display: flex; align-items: center; justify-content: space-between; padding: 15px 5%; background: var(--blanco); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        header img { height: 50px; }
-        nav a { margin-left: 20px; text-decoration: none; color: var(--azul-profundo); font-weight: bold; }
+        header img { height: 50px; border-radius: 5px; }
+        nav a { margin-left: 20px; text-decoration: none; color: var(--azul-profundo); font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: var(--verde-wa); }
 
         /* Héroe */
         .hero { background: linear-gradient(rgba(0,86,179,0.8), rgba(0,86,179,0.8)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; color: white; padding: 100px 5%; text-align: center; }
         .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-        .btn-cta { background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 20px; transition: 0.3s; }
+        .btn-cta { background: var(--verde-wa); color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 20px; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         .btn-cta:hover { transform: scale(1.05); background: #128C7E; }
 
         /* Secciones Generales */
         section { padding: 60px 5%; }
-        .section-title { text-align: center; color: var(--azul-profundo); margin-bottom: 40px; font-size: 2rem; }
+        .section-title { text-align: center; color: var(--azul-profundo); margin-bottom: 40px; font-size: 2.2rem; }
 
         /* Sobre Nosotros */
-        .about-container { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .about-container { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
         .about-text { flex: 1; min-width: 300px; }
-        .about-img { flex: 1; min-width: 300px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .about-img { 
+            flex: 1; 
+            min-width: 300px; 
+            max-width: 450px; 
+            height: 350px; 
+            object-fit: cover; 
+            border-radius: 15px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+            display: block;
+            margin: 0 auto;
+        }
 
         /* Servicios */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .card { background: var(--blanco); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; border-top: 5px solid var(--azul-profundo); }
         .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 230px; object-fit: cover; }
         .card-content { padding: 20px; }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card h3 { color: var(--azul-profundo); margin-top: 0; }
 
         /* FAQ */
         .faq { background: var(--gris-suave); }
-        .faq-item { background: white; margin-bottom: 10px; padding: 20px; border-radius: 8px; cursor: pointer; border-left: 4px solid var(--azul-profundo); }
+        .faq-item { background: white; margin-bottom: 15px; padding: 20px; border-radius: 8px; border-left: 5px solid var(--azul-profundo); }
 
         /* Contacto */
         .contact-info { text-align: center; background: var(--azul-claro); border-radius: 15px; padding: 40px; }
-        .social-icons { margin-top: 20px; }
-        .social-icons a { font-size: 2.5rem; margin: 0 15px; color: var(--azul-profundo); transition: 0.3s; }
-        .social-icons a:hover { color: #000; }
+        .social-icons { margin-top: 25px; }
+        .social-icons a { font-size: 3rem; margin: 0 20px; color: var(--azul-profundo); transition: 0.3s; display: inline-block; }
+        .social-icons a:hover { color: var(--verde-wa); transform: translateY(-5px); }
 
         /* WhatsApp Flotante */
-        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 2000; text-decoration: none; }
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: var(--verde-wa); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 38px; box-shadow: 2px 4px 15px rgba(0,0,0,0.3); z-index: 2000; text-decoration: none; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
-        footer { background: #111; color: white; text-align: center; padding: 20px; }
+        footer { background: #111; color: #ccc; text-align: center; padding: 25px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -70,7 +71,7 @@
     <header>
         <div style="display: flex; align-items: center;">
             <img src="img/logo.png" alt="Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3467/3467830.png'">
-            <span style="margin-left: 10px; font-weight: bold; font-size: 1.2rem;">Moisés Rosario</span>
+            <span style="margin-left: 12px; font-weight: bold; font-size: 1.4rem; color: var(--azul-profundo);">Moisés Rosario</span>
         </div>
         <nav>
             <a href="#inicio">Inicio</a>
@@ -83,13 +84,13 @@
     <section id="inicio" class="hero">
         <h1>Moisés Rosario Técnico Dental</h1>
         <p>Expertos en prótesis de alta gama y ortopedia funcional en Carúpano.</p>
-        <a href="https://wa.me/584120000000" class="btn-cta">Contactanos vía WhatsApp</a>
+        <a href="https://wa.me/584120000000" class="btn-cta"><i class="fab fa-whatsapp"></i> Contáctanos vía WhatsApp</a>
     </section>
 
     <section id="sobre-nosotros">
         <h2 class="section-title">Sobre Nosotros</h2>
         <div class="about-container">
-            <img src="img/Sobrenosotros.webp" alt="Laboratorio" class="about-img">
+            <img src="img/Sobrenosotros.webp" alt="Laboratorio Moisés Rosario" class="about-img" onerror="this.src='https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=600&q=80'">
             <div class="about-text">
                 <h3>Pasión por la Precisión</h3>
                 <p>En el Laboratorio Moisés Rosario, combinamos la precisión técnica con el compromiso profesional. Con sede en Carúpano, nos especializamos en soluciones protésicas y ortopedia funcional utilizando materiales de primera línea como <strong>Dentalix y Acripoll</strong>.</p>
@@ -99,27 +100,27 @@
     </section>
 
     <section id="servicios" style="background: var(--gris-suave);">
-        <h2 class="section-title">Nuestros Servicios</h2>
+        <h2 class="section-title">Nuestros Servicios Especializados</h2>
         <div class="services-grid">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=500&q=60" alt="Prótesis">
+                <img src="img/rehabilitacion.jpeg" alt="Rehabilitación" onerror="this.src='https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=500&q=60'">
                 <div class="card-content">
                     <h3>Rehabilitación</h3>
-                    <p>Prótesis flexibles, acrílicas, provisionales y coronas de alta estética.</p>
+                    <p>Prótesis flexibles, acrílicas, provisionales y coronas de alta estética con acabados naturales.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=500&q=60" alt="Ortopedia">
+                <img src="img/ortopedia.jpeg" alt="Ortopedia" onerror="this.src='https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=500&q=60'">
                 <div class="card-content">
                     <h3>Ortopedia Funcional</h3>
-                    <p>Aparatos SN1, Bimler, Expansores y Retenedores personalizados.</p>
+                    <p>Aparatos SN1, Bimler, Expansores y Retenedores personalizados para cada tratamiento.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=500&q=60" alt="Especialidades">
+                <img src="img/especialidades.jpeg" alt="Especialidades" onerror="this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=500&q=60'">
                 <div class="card-content">
                     <h3>Especialidades</h3>
-                    <p>Aparatos NAM, Férulas Michigan y deportivas, vaciado de modelos.</p>
+                    <p>Aparatos NAM, Férulas Michigan y deportivas, y vaciado de modelos de alta precisión.</p>
                 </div>
             </div>
         </div>
@@ -127,20 +128,21 @@
 
     <section id="faq">
         <h2 class="section-title">Preguntas Frecuentes</h2>
-        <div class="faq-item"><strong>¿Tiempo de entrega?</strong><br>Entregamos tus trabajos en solo 1 semana.</div>
-        <div class="faq-item"><strong>¿Materiales?</strong><br>Acrílicos de alta gama: Dentalix y Acripoll.</div>
-        <div class="faq-item"><strong>¿Logística?</strong><br>Recogida en Carúpano y envíos nacionales por mensajería.</div>
+        <div class="faq-item"><strong>¿Cuál es el tiempo de entrega?</strong><br>Entregamos tus trabajos en solo 1 semana laborable.</div>
+        <div class="faq-item"><strong>¿Qué materiales garantizan la calidad?</strong><br>Utilizamos exclusivamente acrílicos de alta gama: Dentalix y Acripoll.</div>
+        <div class="faq-item"><strong>¿Cómo funciona la logística?</strong><br>Recogida personal en Carúpano y envíos nacionales seguros por mensajería.</div>
+        <div class="faq-item"><strong>¿Realizan ajustes post-entrega?</strong><br>Sí, estamos comprometidos con el calce perfecto y realizamos los ajustes necesarios.</div>
     </section>
 
     <section id="contacto">
-        <h2 class="section-title">Contacto</h2>
+        <h2 class="section-title">Contacto Directo</h2>
         <div class="contact-info">
             <p><i class="fas fa-map-marker-alt"></i> Carúpano, Estado Sucre, Venezuela</p>
-            <p><i class="fas fa-truck"></i> Envíos a todo el país</p>
-            <h3>Síguenos en nuestras redes:</h3>
+            <p><i class="fas fa-truck"></i> Logística Local y Envíos Nacionales</p>
+            <h3>Encuéntranos en Redes Sociales:</h3>
             <div class="social-icons">
-                <a href="https://www.instagram.com/moisesr.labd?igsh=dms1Y2Y5OTk5OTZ0" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@moisesr.lab?_r=1&_t=ZS-93egQKMpoEX" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/moisesr.labd?igsh=dms1Y2Y5OTk5OTZ0" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@moisesr.lab?_r=1&_t=ZS-93egQKMpoEX" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
         </div>
     </section>
@@ -150,7 +152,7 @@
     </a>
 
     <footer>
-        <p>&copy; 2026 Moisés Rosario Técnico Dental | Diseñado para precisión dental.</p>
+        <p>&copy; 2026 Moisés Rosario Técnico Dental | Precisión y Estética Dental en Venezuela.</p>
     </footer>
 
 </body>
