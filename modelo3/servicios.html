@@ -3,36 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios | Moisés Rosario</title>
+    <title>Servicios Especializados | Moisés Rosario Lab</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --blue-dark: #0d2c44; --gold: #c5a059; }
-        * { box-sizing: border-box; }
-        body { font-family: sans-serif; margin: 0; background: #eef2f5; }
-        header { background: var(--blue-dark); padding: 15px 5%; display: flex; flex-direction: column; align-items: center; border-bottom: 4px solid var(--gold); }
-        .logo { color: white; text-decoration: none; font-weight: bold; margin-bottom: 10px; }
-        nav { display: flex; gap: 15px; }
-        nav a { color: white; text-decoration: none; font-size: 0.8rem; }
+        :root { --blue-dark: #0d2c44; --gold: #c5a059; --bg-light: #f4f7f9; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: var(--bg-light); color: #333; line-height: 1.6; }
+        
+        /* Navegación Consistente */
+        header { background: var(--blue-dark); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
+        .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+        .logo span { color: var(--gold); }
+        nav { display: flex; gap: 20px; }
+        nav a { color: white; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
 
-        .container { padding: 30px 5%; }
-        .service-card { background: white; border-radius: 15px; overflow: hidden; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
-        .card-img { height: 200px; background-size: cover; background-position: center; }
-        .card-body { padding: 25px; }
-        .card-body h3 { margin-top: 0; color: var(--blue-dark); }
+        /* Contenedor de Servicios */
+        .container { padding: 60px 8%; max-width: 1200px; margin: auto; }
+        .header-title { text-align: center; margin-bottom: 50px; }
+        .header-title h1 { color: var(--blue-dark); font-size: 2.5rem; }
+        .header-title .line { width: 60px; height: 4px; background: var(--gold); margin: 15px auto; }
 
-        @media (min-width: 768px) {
-            header { flex-direction: row; justify-content: space-between; padding: 20px 8%; }
-            .container { padding: 50px 8%; }
-            .service-card { flex-direction: row; height: 300px; }
-            .card-img { flex: 1; height: auto; }
-            .card-body { flex: 1.2; display: flex; flex-direction: column; justify-content: center; }
-            nav a { font-size: 0.9rem; }
+        /* Tarjetas de Servicio */
+        .service-card { 
+            background: white; border-radius: 15px; display: flex; overflow: hidden; 
+            margin-bottom: 40px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); flex-wrap: wrap;
+            border-left: 5px solid var(--blue-dark);
+        }
+        .card-content { flex: 1.2; padding: 40px; min-width: 300px; }
+        .card-content h2 { color: var(--blue-dark); margin-bottom: 15px; font-size: 1.8rem; }
+        .card-image { flex: 1; min-width: 300px; min-height: 280px; background-size: cover; background-position: center; }
+        
+        /* Botón de Acción */
+        .btn-info { display: inline-block; margin-top: 20px; color: var(--gold); text-decoration: none; font-weight: bold; border: 1px solid var(--gold); padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .btn-info:hover { background: var(--gold); color: white; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; gap: 15px; }
+            .card-content { padding: 30px; text-align: center; }
+            .service-card { flex-direction: column; }
+            .card-image { min-height: 200px; }
         }
     </style>
 </head>
 <body>
+
     <header>
-        <a href="index.html" class="logo">Moisés Rosario<span style="color:var(--gold)">.Lab</span></a>
+        <a href="index.html" class="logo">Moisés Rosario<span>.Lab</span></a>
         <nav>
             <a href="index.html">Inicio</a>
             <a href="nosotros.html">Nosotros</a>
@@ -40,14 +58,45 @@
             <a href="contacto.html">Ubicación</a>
         </nav>
     </header>
+
     <div class="container">
+        <div class="header-title">
+            <h1>Nuestros Servicios</h1>
+            <div class="line"></div>
+            <p>Precisión técnica y materiales certificados para resultados de alta gama.</p>
+        </div>
+
         <div class="service-card">
-            <div class="card-body">
-                <h3>Rehabilitación Protésica</h3>
-                <p>Prótesis con acrílicos Dentalix y Acripoll de alta gama.</p>
+            <div class="card-content">
+                <h2>Rehabilitación Protésica</h2>
+                <p>Confeccionamos prótesis totales y parciales utilizando acrílicos de alto impacto (Dentalix y Acripoll). Nos enfocamos en la biocompatibilidad y una estética natural que devuelve la confianza al paciente.</p>
+                <a href="contacto.html" class="btn-info">Consultar Presupuesto</a>
             </div>
-            <div class="card-img" style="background-image: url('../img/rehabilitacion.jpeg');"></div>
+            <div class="card-image" style="background-image: url('../img/rehabilitacion.jpeg');"></div>
         </div>
+
+        <div class="service-card">
+            <div class="card-content">
+                <h2>Ortopedia Funcional</h2>
+                <p>Especialistas en aparatología interceptiva. Diseñamos y fabricamos dispositivos SN1, SN2 y sistemas Bimler bajo estrictos controles anatómicos para garantizar el éxito del tratamiento maxilofacial.</p>
+                <a href="contacto.html" class="btn-info">Consultar Presupuesto</a>
+            </div>
+            <div class="card-image" style="background-image: url('../img/ortopedia.jpeg');"></div>
         </div>
+
+        <div class="service-card">
+            <div class="card-content">
+                <h2>Especialidades Avanzadas</h2>
+                <p>Ofrecemos soluciones complejas como el Moldeador Nasoalveolar (NAM) para pacientes LPH, férulas de Michigan para bruxismo y dispositivos de avance mandibular para apnea del sueño.</p>
+                <a href="contacto.html" class="btn-info">Consultar Presupuesto</a>
+            </div>
+            <div class="card-image" style="background-image: url('../img/especialidades.jpeg');"></div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; color: #888; font-size: 0.8rem;">
+        © 2026 Moisés Rosario - Laboratorio de Mecánica Dental Avanzada
+    </footer>
+
 </body>
 </html>
