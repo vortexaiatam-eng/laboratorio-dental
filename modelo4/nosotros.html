@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Trayectoria Moisés Rosario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --blue-deep: #0d2438; --gold: #c5a059; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; color: var(--blue-deep); }
+        
+        header { background: var(--blue-deep); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 5px solid var(--gold); }
+        .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+        .logo span { color: var(--gold); }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; }
 
+        .ceo-hero { background: var(--blue-deep); color: white; padding: 60px 8%; display: flex; align-items: center; flex-wrap: wrap; gap: 40px; }
+        .ceo-text { flex: 1; min-width: 320px; }
+        .ceo-img { flex: 1; min-width: 320px; clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); border-left: 8px solid var(--gold); }
+        .ceo-img img { width: 100%; border-radius: 5px; }
+
+        .mission-vision { padding: 60px 8%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 4px solid var(--gold); }
+        
+        @media (max-width: 768px) { .ceo-hero { text-align: center; } .ceo-img { clip-path: none; border-left: none; border-top: 5px solid var(--gold); } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Moisés Rosario<span>.Lab</span></a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Ubicación</a>
+        </nav>
+    </header>
+
+    <section class="ceo-hero">
+        <div class="ceo-text">
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Liderazgo Técnico y Compromiso</h1>
+            <p style="font-size: 1.1rem; opacity: 0.9;">Bajo la dirección de Moisés Rosario, transformamos la mecánica dental en ingeniería de precisión. Nuestra misión es ser el aliado estratégico de cada clínica en Sucre.</p>
+        </div>
+        <div class="ceo-img">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Moisés Rosario CEO">
+        </div>
+    </section>
+
+    <div class="mission-vision">
+        <div class="card">
+            <h3 style="color: var(--gold); margin-bottom: 15px;">Visión CEO</h3>
+            <p>Consolidar el laboratorio como el centro de referencia tecnológica en el Eje de Paria, elevando los estándares de salud dental regional.</p>
+        </div>
+        <div class="card">
+            <h3 style="color: var(--gold); margin-bottom: 15px;">Valores de Marca</h3>
+            <p>Integridad en materiales, transparencia en procesos y puntualidad rigurosa en cada entrega clínica.</p>
+        </div>
+    </div>
+</body>
+</html>
