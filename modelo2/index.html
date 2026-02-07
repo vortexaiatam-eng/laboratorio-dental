@@ -6,40 +6,57 @@
     <title>Moisés Rosario | Dental Lab Premium</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; margin: 0; background-color: #f8f9fa; color: #2d3436; }
+        body { font-family: 'Inter', 'Segoe UI', sans-serif; margin: 0; background-color: #f8f9fa; color: #2d3436; }
         
-        /* Estilo Elegante de Navegación */
-        header { background: #fff; padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; }
-        .logo-text { font-size: 1.5rem; font-weight: 800; color: #0984e3; letter-spacing: -1px; }
+        /* Navegación Minimalista */
+        header { background: #fff; padding: 15px 10%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+        .logo-box { display: flex; align-items: center; gap: 10px; }
+        .logo-box img { height: 40px; border-radius: 5px; }
+        .logo-text { font-size: 1.2rem; font-weight: 800; color: #0984e3; text-transform: uppercase; }
 
-        /* Hero con Estilo Card */
-        .hero-premium { padding: 80px 10%; background: #0984e3; color: white; border-radius: 0 0 50px 50px; text-align: center; }
-        .hero-premium h1 { font-size: 3rem; margin: 0; }
-        .hero-premium p { font-size: 1.2rem; opacity: 0.9; }
+        /* Hero Moderno */
+        .hero-premium { padding: 60px 10%; background: #0984e3; color: white; text-align: center; border-radius: 0 0 40px 40px; }
+        .hero-premium h1 { font-size: 2.5rem; margin: 0; font-weight: 800; }
+        .hero-premium p { font-size: 1.1rem; opacity: 0.9; margin-top: 10px; }
 
-        /* Grid Moderno */
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 10%; }
-        .feature-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
-        .feature-card:hover { transform: translateY(-10px); }
-        .feature-card i { font-size: 3rem; color: #0984e3; margin-bottom: 20px; }
+        /* Sección Sobre Nosotros */
+        .about-section { padding: 50px 10%; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; background: white; }
+        .about-img { flex: 1; min-width: 300px; height: 350px; object-fit: cover; border-radius: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .about-content { flex: 1; min-width: 300px; }
 
-        /* Sección de Contacto tipo "Bento Box" */
-        .bento-contact { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; padding: 50px 10%; }
-        .bento-item { background: #fff; padding: 30px; border-radius: 20px; border: 1px solid #eee; }
-        .highlight { background: #2d3436; color: white; }
+        /* Grid de Servicios con Imágenes Reales */
+        .services-title { text-align: center; padding-top: 50px; font-size: 2rem; color: #0984e3; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 30px 10% 60px; }
+        .feature-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #f1f1f1; }
+        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .feature-card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-info { padding: 25px; text-align: center; }
+        .card-info h3 { margin: 0 0 10px; color: #0984e3; }
 
-        .wa-btn { background: #25D366; color: white; padding: 20px; border-radius: 50px; text-decoration: none; font-weight: bold; display: block; text-align: center; margin-top: 20px; }
+        /* Contacto Bento */
+        .bento-contact { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; padding: 0 10% 60px; }
+        .bento-item { background: #fff; padding: 30px; border-radius: 25px; border: 1px solid #eee; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+        .highlight { background: #2d3436; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        
+        .wa-btn { background: #25D366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; transition: 0.3s; }
+        .wa-btn:hover { background: #128C7E; transform: scale(1.05); }
+
+        footer { text-align: center; padding: 40px; color: #b2bec3; font-size: 0.9rem; }
 
         @media (max-width: 768px) {
             .bento-contact { grid-template-columns: 1fr; }
-            .hero-premium h1 { font-size: 2rem; }
+            .hero-premium h1 { font-size: 1.8rem; }
+            .about-section { text-align: center; }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo-text">MOISÉS ROSARIO</div>
-        <div style="font-size: 0.8rem; font-weight: bold; color: #636e72;">LABORATORIO DENTAL</div>
+        <div class="logo-box">
+            <img src="../img/logo.png" alt="Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3467/3467830.png'">
+            <div class="logo-text">Moisés Rosario</div>
+        </div>
+        <div style="font-size: 0.7rem; font-weight: bold; color: #636e72; text-align: right;">DENTAL LAB<br>CARÚPANO</div>
     </header>
 
     <section class="hero-premium">
@@ -47,41 +64,58 @@
         <p>Precisión absoluta en cada pieza. Calidad garantizada en 1 semana.</p>
     </section>
 
+    <section class="about-section">
+        <img src="../img/Sobrenosotros.webp" alt="Laboratorio" class="about-img" onerror="this.src='https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=600&q=80'">
+        <div class="about-content">
+            <h2 style="color:#0984e3;">Sobre Nosotros</h2>
+            <p>Combinamos la precisión técnica con el compromiso profesional en Carúpano. Especialistas en soluciones protésicas y ortopedia funcional con materiales de primera línea.</p>
+            <p><strong>Ubicación:</strong> Calle San Felix, Edificio Sahara, Piso 2, Local 2-4.</p>
+        </div>
+    </section>
+
+    <h2 class="services-title">Nuestros Servicios</h2>
     <section class="grid-container">
         <div class="feature-card">
-            <i class="fas fa-microscope"></i>
-            <h3>Alta Tecnología</h3>
-            <p>Uso de materiales certificados Dentalix y Acripoll.</p>
+            <img src="../img/rehabilitacion.jpeg" alt="Rehabilitación" onerror="this.src='https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=500&q=60'">
+            <div class="card-info">
+                <h3>Rehabilitación</h3>
+                <p>Prótesis flexibles y acrílicas de alta gama.</p>
+            </div>
         </div>
         <div class="feature-card">
-            <i class="fas fa-truck-loading"></i>
-            <h3>Logística Total</h3>
-            <p>Recogida en Carúpano y envíos a toda Venezuela.</p>
+            <img src="../img/ortopedia.jpeg" alt="Ortopedia" onerror="this.src='https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=500&q=60'">
+            <div class="card-info">
+                <h3>Ortopedia</h3>
+                <p>Aparatos SN1, Bimler y expansores.</p>
+            </div>
         </div>
         <div class="feature-card">
-            <i class="fas fa-award"></i>
-            <h3>Resultados Reales</h3>
-            <p>Prótesis y ortopedia funcional con acabados de lujo.</p>
+            <img src="../img/especialidades.jpeg" alt="Especialidades" onerror="this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=500&q=60'">
+            <div class="card-info">
+                <h3>Especialidades</h3>
+                <p>NAM (LPH), Michigan y Férulas.</p>
+            </div>
         </div>
     </section>
 
     <section class="bento-contact">
         <div class="bento-item">
-            <h2>Ubicación</h2>
-            <p><i class="fas fa-map-marker-alt"></i> Calle San Felix, Edificio Sahara, Piso 2, Local 2-4. Carúpano.</p>
-            <p><i class="fas fa-phone"></i> +58 424-8121610</p>
+            <h2 style="color:#0984e3; margin-top:0;">Contacto Directo</h2>
+            <p><i class="fas fa-map-marker-alt" style="color:#0984e3;"></i> Carúpano, Sucre, Venezuela.</p>
+            <p><i class="fas fa-phone" style="color:#0984e3;"></i> +58 424-8121610</p>
+            <p><i class="fas fa-truck" style="color:#0984e3;"></i> Envíos nacionales disponibles.</p>
         </div>
         <div class="bento-item highlight">
-            <h2>Redes Sociales</h2>
-            <div style="font-size: 2rem; display: flex; gap: 20px; margin-top: 20px;">
+            <h3>Síguenos</h3>
+            <div style="font-size: 2.5rem; display: flex; gap: 20px; margin: 15px 0;">
                 <a href="https://www.instagram.com/moisesr.labd" style="color:white;"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.tiktok.com/@moisesr.lab" style="color:white;"><i class="fab fa-tiktok"></i></a>
             </div>
-            <a href="https://wa.me/584248121610" class="wa-btn">Contactar Ahora</a>
+            <a href="https://wa.me/584248121610" class="wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 40px; color: #b2bec3;">
+    <footer>
         &copy; 2026 Moisés Rosario - Carúpano, Venezuela
     </footer>
 </body>
