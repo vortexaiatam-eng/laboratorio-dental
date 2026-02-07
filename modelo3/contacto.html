@@ -3,41 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubicación | Moisés Rosario</title>
+    <title>Ubicación y Contacto | Carúpano</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --blue-dark: #0d2c44; --gold: #c5a059; }
         body { font-family: sans-serif; margin: 0; background: var(--blue-dark); color: white; }
-        .contact-wrapper { padding: 60px 8%; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
-        .values { flex: 1; min-width: 300px; }
-        .values h2 { color: var(--gold); font-size: 2rem; }
-        .value-item { display: flex; align-items: center; margin-bottom: 20px; }
-        .value-item i { color: var(--gold); font-size: 1.5rem; margin-right: 15px; border: 1px solid var(--gold); padding: 10px; border-radius: 50%; }
+        header { background: var(--blue-dark); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--gold); }
+        .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+        .logo span { color: var(--gold); }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; opacity: 0.8; }
 
-        .contact-card { flex: 1; background: white; color: #333; padding: 40px; border-radius: 20px; min-width: 300px; }
-        .contact-card h3 { color: var(--blue-dark); margin-top: 0; }
-        .wa-contact { background: #25D366; color: white; text-align: center; padding: 15px; border-radius: 10px; text-decoration: none; display: block; font-weight: bold; margin-top: 20px; }
+        .contact-container { padding: 80px 8%; text-align: center; }
+        .card { background: white; color: #333; padding: 40px; border-radius: 20px; display: inline-block; max-width: 600px; width: 100%; text-align: left; }
+        .card h2 { color: var(--blue-dark); border-bottom: 2px solid var(--gold); padding-bottom: 10px; }
+        .wa-btn { background: #25D366; color: white; padding: 15px; display: block; text-align: center; text-decoration: none; border-radius: 10px; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="contact-wrapper">
-        <div class="values">
-            <h2>Nuestros Valores</h2>
-            <div class="value-item"><i class="fas fa-check"></i> Integridad de Materiales Certificados</div>
-            <div class="value-item"><i class="fas fa-clock"></i> Entrega en 7 días hábiles</div>
-            <div class="value-item"><i class="fas fa-headset"></i> Soporte Técnico Directo</div>
+    <header>
+        <a href="index.html" class="logo">Moisés Rosario<span>.Lab</span></a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Ubicación</a>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <div class="card">
+            <h2>Ubicación GEO-Localizada</h2>
+            <p><i class="fas fa-map-marker-alt" style="color:var(--gold)"></i> Calle San Felix, Edificio Sahara, Piso 2, Local 2-4. Carúpano, Estado Sucre.</p>
+            <p><i class="fas fa-truck" style="color:var(--gold)"></i> Envíos nacionales y locales garantizados.</p>
+            <a href="https://wa.me/584248121610" class="wa-btn"><i class="fab fa-whatsapp"></i> CONTACTAR POR WHATSAPP</a>
         </div>
-        
-        <div class="contact-card">
-            <h3>Centro de Recepción</h3>
-            <p><strong>Dirección:</strong> Calle San Felix, Edificio Sahara, Piso 2, Local 2-4. Carúpano, Sucre.</p>
-            <p><strong>Teléfono:</strong> +58 424-8121610</p>
-            <p><strong>Envíos:</strong> Servicio regional y nacional.</p>
-            <a href="https://wa.me/584248121610" class="wa-contact"><i class="fab fa-whatsapp"></i> CONTACTAR AHORA</a>
-        </div>
-    </div>
-    <div style="text-align: center; padding-bottom: 30px; opacity: 0.5;">
-        © 2026 Moisés Rosario - Mecánica Dental Avanzada
     </div>
 </body>
 </html>
