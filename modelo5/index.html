@@ -3,37 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moisés Rosario | Precision Dental Lab</title>
+    <title>Moisés Rosario | Innovación Dental</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            dark: '#0f172a',
-                            gold: '#c5a059',
-                            accent: '#38bdf8'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        body { font-family: 'Inter', sans-serif; background: #0f172a; color: white; }
+        body { background-color: #0f172a; color: white; }
+        
+        /* Efecto Parallax para el Hero */
+        .parallax-bg {
+            background-image: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1920&q=80');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gold-gradient { background: linear-gradient(135deg, #c5a059 0%, #947a44 100%); }
+        
+        /* Botón Flotante WhatsApp */
+        .btn-float { position: fixed; bottom: 30px; right: 30px; z-index: 100; transition: transform 0.3s; }
+        .btn-float:hover { transform: scale(1.1); }
     </style>
 </head>
-<body x-data="{ mobileMenu: false }" class="antialiased">
+<body x-data="{ mobileMenu: false }">
+
+    <a href="https://wa.me/584248121610" class="btn-float bg-green-500 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl">
+        <i class="fab fa-whatsapp text-3xl text-white"></i>
+    </a>
 
     <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold">MOISÉS<span class="text-[#c5a059]">ROSARIO</span></a>
+            <div class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-widest">
+                <a href="#inicio" class="hover:text-[#c5a059]">Inicio</a>
+                <a href="#servicios" class="hover:text-[#c5a059]">Servicios</a>
+                <a href="#nosotros" class="hover:text-[#c5a059]">Expertise</a>
+                <a href="#contacto" class="hover:text-[#c5a059]">Ubicación</a>
+            </div>
+            <button @click="mobileMenu = !mobileMenu" class="md:hidden"><i class="fas fa-bars text-xl"></i></button>
+        </div>
+    </nav>
+
+    <section id="inicio" class="parallax-bg h-screen flex items-center justify-center text-center px-6">
+        <div class="bg-black/60 absolute inset-0"></div>
+        <div class="relative z-10" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Precisión <span class="text-[#c5a059]">Digital</span></h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Ingeniería dental de vanguardia en Carúpano para especialistas exigentes.</p>
+            <a href="#servicios" class="gold-gradient text-black font-bold px-8 py-4 rounded-full uppercase text-sm tracking-widest">Ver Servicios</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-16">Especialidades Técnicas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="glass rounded-3xl overflow-hidden group" data-aos="zoom-in">
+                <div class="h-48 overflow-hidden">
+                    <img src="../img/rehabilitacion.jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-tooth text-[#c5a059] text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Rehabilitación Protésica</h3>
+                    <p class="text-gray-400 text-sm">Prótesis de alto impacto con acrílicos Dentalix y Acripoll.</p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl overflow-hidden group" data-aos="zoom-in" data-aos-delay="100">
+                <div class="h-48 overflow-hidden">
+                    <img src="../img/ortopedia.jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-microscope text-[#c5a059] text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Ortopedia Funcional</h3>
+                    <p class="text-gray-400 text-sm">Sistemas SN1, SN2 y Bimler con ajuste micrométrico.</p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl overflow-hidden group" data-aos="zoom-in" data-aos-delay="200">
+                <div class="h-48 overflow-hidden">
+                    <img src="../img/especialidades.jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-certificate text-[#c5a059] text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Especialidades NAM</h3>
+                    <p class="text-gray-400 text-sm">Moldeadores nasoalveolares y aparatología avanzada LPH.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contacto" class="py-12 glass mt-20 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-6 italic">Moisés Rosario</h2>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-2xl hover:text-[#c5a059] transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl hover:text-[#c5a059] transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-2xl hover:text-[#c5a059] transition"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/584248121610" class="text-2xl hover:text-[#c5a059] transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <p class="text-gray-500 text-sm">
+                Calle San Felix, Edificio Sahara, Piso 2, Carúpano.<br>
+                © 2026 Moisés Rosario Lab - Ingeniería Dental Avanzada.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
         <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
             <a href="#" class="text-xl font-bold tracking-tighter">MOISÉS<span class="text-brand-gold">ROSARIO</span></a>
             
