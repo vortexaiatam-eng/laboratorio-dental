@@ -6,18 +6,17 @@
     <title>Nosotros | Trayectoria Profesional</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --blue-dark: #0d2c44; --gold: #c5a059; --light: #f4f7f9; }
-        body { font-family: sans-serif; margin: 0; background: var(--light); color: #333; }
+        :root { --blue-dark: #0d2c44; --gold: #c5a059; }
+        body { font-family: sans-serif; margin: 0; line-height: 1.7; background: #fff; }
         header { background: var(--blue-dark); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--gold); }
         .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
         .logo span { color: var(--gold); }
-        nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; opacity: 0.8; }
-        
-        .content-box { padding: 60px 8%; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; max-width: 1200px; margin: auto; }
-        .text { flex: 1; min-width: 300px; }
-        .image { flex: 1; min-width: 300px; }
-        .image img { width: 100%; border-radius: 15px; box-shadow: 15px 15px 0 var(--gold); }
-        h1 { color: var(--blue-dark); font-size: 2.5rem; }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; }
+        .about-grid { padding: 60px 8%; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; max-width: 1200px; margin: auto; }
+        .about-text { flex: 1; min-width: 320px; }
+        .about-text h1 { color: var(--blue-dark); font-size: 2.5rem; margin-bottom: 25px; }
+        .about-image { flex: 1; min-width: 320px; }
+        .about-image img { width: 100%; border-radius: 20px; box-shadow: 20px 20px 0 var(--gold); }
     </style>
 </head>
 <body>
@@ -30,14 +29,14 @@
             <a href="contacto.html">Ubicación</a>
         </nav>
     </header>
-
-    <div class="content-box">
-        <div class="text">
-            <h1>Expertos en Mecánica Dental</h1>
-            <p>Con sede en Carúpano, el laboratorio dirigido por Moisés Rosario combina la artesanía dental con tecnología de vanguardia. Nuestra misión es proveer a los odontólogos soluciones que superen las expectativas de sus pacientes.</p>
+    <div class="about-grid">
+        <div class="about-text">
+            <h1>Excelencia en Mecánica Dental</h1>
+            <p>El laboratorio dirigido por <strong>Moisés Rosario</strong> representa la unión entre la experiencia artesanal y la innovación técnica. Nos especializamos en ser el soporte de confianza para odontólogos exigentes.</p>
+            <p>Utilizamos materiales de élite y procesos certificados para asegurar que cada pieza entregada sea sinónimo de salud y estética superior.</p>
         </div>
-        <div class="image">
-            <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80" alt="Laboratorio Dental">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Técnico Dental trabajando">
         </div>
     </div>
 </body>
