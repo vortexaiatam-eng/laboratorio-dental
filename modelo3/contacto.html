@@ -3,45 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubicación y Logística | Carúpano, Sucre</title>
+    <title>Ubicación | Moisés Rosario</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Estilos de Nav idénticos */
-        :root { --blue: #0a3d62; --gold: #b38b4d; }
-        body { font-family: sans-serif; margin: 0; background: #f8f9fa; }
-        .main-nav { background: var(--blue); padding: 15px 5%; display: flex; flex-direction: column; align-items: center; }
-        .logo { color: white; text-decoration: none; font-weight: bold; margin-bottom: 10px; }
-        .nav-links a { color: white; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        :root { --blue-dark: #0d2c44; --gold: #c5a059; }
+        body { font-family: sans-serif; margin: 0; background: var(--blue-dark); color: white; }
+        .contact-wrapper { padding: 60px 8%; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
+        .values { flex: 1; min-width: 300px; }
+        .values h2 { color: var(--gold); font-size: 2rem; }
+        .value-item { display: flex; align-items: center; margin-bottom: 20px; }
+        .value-item i { color: var(--gold); font-size: 1.5rem; margin-right: 15px; border: 1px solid var(--gold); padding: 10px; border-radius: 50%; }
 
-        .geo-container { padding: 40px 20px; text-align: center; }
-        .info-card { background: white; padding: 30px 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: inline-block; text-align: left; max-width: 500px; width: 100%; }
-        .info-card i { color: var(--blue); margin-right: 10px; width: 20px; }
-        .wa-btn { background: #25D366; color: white; padding: 15px; display: block; text-align: center; text-decoration: none; border-radius: 10px; font-weight: bold; margin-top: 25px; transition: 0.3s; }
-        .wa-btn:hover { background: #128C7E; }
-
-        @media (min-width: 768px) {
-            .main-nav { flex-direction: row; justify-content: space-between; }
-        }
+        .contact-card { flex: 1; background: white; color: #333; padding: 40px; border-radius: 20px; min-width: 300px; }
+        .contact-card h3 { color: var(--blue-dark); margin-top: 0; }
+        .wa-contact { background: #25D366; color: white; text-align: center; padding: 15px; border-radius: 10px; text-decoration: none; display: block; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <a href="index.html" class="logo">Moisés Rosario <span style="color:var(--gold)">Lab</span></a>
-        <div class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Trayectoria</a>
-            <a href="servicios.html">Especialidades</a>
-            <a href="contacto.html">Ubicación</a>
+    <div class="contact-wrapper">
+        <div class="values">
+            <h2>Nuestros Valores</h2>
+            <div class="value-item"><i class="fas fa-check"></i> Integridad de Materiales Certificados</div>
+            <div class="value-item"><i class="fas fa-clock"></i> Entrega en 7 días hábiles</div>
+            <div class="value-item"><i class="fas fa-headset"></i> Soporte Técnico Directo</div>
         </div>
-    </nav>
-    <div class="geo-container">
-        <h1 style="color:var(--blue);">Logística y Alcance Regional</h1>
-        <div class="info-card">
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Sede:</strong> Calle San Felix, Edificio Sahara, Piso 2, Local 2-4. Carúpano, Sucre.</p>
-            <p><i class="fas fa-truck"></i> <strong>Envíos:</strong> Cobertura en Cumaná, Río Caribe, Casanay y resto del Estado Sucre.</p>
-            <p><i class="fas fa-phone-alt"></i> <strong>Contacto:</strong> +58 424-8121610</p>
-            <a href="https://wa.me/584248121610" class="wa-btn"><i class="fab fa-whatsapp"></i> Contactar vía WhatsApp</a>
+        
+        <div class="contact-card">
+            <h3>Centro de Recepción</h3>
+            <p><strong>Dirección:</strong> Calle San Felix, Edificio Sahara, Piso 2, Local 2-4. Carúpano, Sucre.</p>
+            <p><strong>Teléfono:</strong> +58 424-8121610</p>
+            <p><strong>Envíos:</strong> Servicio regional y nacional.</p>
+            <a href="https://wa.me/584248121610" class="wa-contact"><i class="fab fa-whatsapp"></i> CONTACTAR AHORA</a>
         </div>
+    </div>
+    <div style="text-align: center; padding-bottom: 30px; opacity: 0.5;">
+        © 2026 Moisés Rosario - Mecánica Dental Avanzada
     </div>
 </body>
 </html>
