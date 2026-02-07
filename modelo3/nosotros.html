@@ -6,30 +6,50 @@
     <title>Trayectoria Profesional | Moisés Rosario CEO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Reutiliza los estilos del nav y body de index.html */
-        .content { padding: 60px 10%; max-width: 900px; margin: auto; }
-        .ceo-quote { border-left: 4px solid #b38b4d; padding-left: 20px; font-style: italic; font-size: 1.2rem; color: #0a3d62; margin: 30px 0; }
-        h1 { color: #0a3d62; }
-        .value-card { background: #f9f9f9; padding: 20px; border-radius: 10px; margin-top: 20px; }
+        /* Reutilizar estilos de navegación de index.html */
+        :root { --blue: #0a3d62; --gold: #b38b4d; }
+        body { font-family: sans-serif; margin: 0; line-height: 1.6; }
+        .main-nav { background: var(--blue); padding: 15px 5%; display: flex; flex-direction: column; align-items: center; }
+        .logo { color: white; text-decoration: none; font-weight: bold; margin-bottom: 10px; }
+        .nav-links a { color: white; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        
+        .content { padding: 40px 20px; max-width: 800px; margin: auto; }
+        .ceo-quote { border-left: 4px solid var(--gold); padding: 10px 20px; font-style: italic; font-size: 1.1rem; color: var(--blue); background: #f9f9f9; margin: 30px 0; }
+        h1 { color: var(--blue); font-size: 1.8rem; }
+        .value-card { background: #f4f7f6; padding: 25px; border-radius: 15px; margin-top: 25px; }
+        
+        @media (min-width: 768px) {
+            .main-nav { flex-direction: row; justify-content: space-between; }
+            h1 { font-size: 2.2rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="content">
+    <nav class="main-nav">
+        <a href="index.html" class="logo">Moisés Rosario <span style="color:var(--gold)">Lab</span></a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Trayectoria</a>
+            <a href="servicios.html">Especialidades</a>
+            <a href="contacto.html">Ubicación</a>
+        </div>
+    </nav>
+    <article class="content">
         <h1>Compromiso con la Excelencia Técnica</h1>
-        <p>Bajo la dirección técnica de <strong>Moisés Rosario</strong>, nuestro laboratorio se ha consolidado como un referente de fiabilidad en el oriente venezolano. Nuestra filosofía de trabajo se basa en el <strong>Zero-Error Protocol</strong>.</p>
+        <p>Bajo la dirección técnica de <strong>Moisés Rosario</strong>, nuestro laboratorio se ha consolidado como un referente de fiabilidad en el oriente venezolano. Nuestra filosofía se basa en el <strong>Zero-Error Protocol</strong>.</p>
         
         <div class="ceo-quote">
             "La mecánica dental no es solo fabricación, es ingeniería personalizada para la salud humana."
         </div>
 
         <div class="value-card">
-            <h3>Valores de Marca</h3>
-            <ul>
-                <li><strong>Integridad de Materiales:</strong> Solo insumos con certificación de grado médico (Dentalix/Acripoll).</li>
-                <li><strong>Sincronización Clínica:</strong> Entregas garantizadas en un máximo de 7 días hábiles.</li>
-                <li><strong>Actualización Continua:</strong> Adaptamos las tendencias globales al contexto clínico local.</li>
+            <h3>Valores Éticos de Marca</h3>
+            <ul style="padding-left: 20px;">
+                <li><strong>Certificación de Materiales:</strong> Uso estricto de Dentalix y Acripoll.</li>
+                <li><strong>Puntualidad Crítica:</strong> Flujo de trabajo optimizado para entregas en 7 días.</li>
+                <li><strong>Soporte Técnico:</strong> Comunicación directa odontólogo-técnico.</li>
             </ul>
         </div>
-    </div>
+    </article>
 </body>
 </html>
