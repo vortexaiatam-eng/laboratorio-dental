@@ -3,53 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trayectoria Profesional | Moisés Rosario CEO</title>
+    <title>Trayectoria y Visión | Moisés Rosario CEO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Reutilizar estilos de navegación de index.html */
-        :root { --blue: #0a3d62; --gold: #b38b4d; }
-        body { font-family: sans-serif; margin: 0; line-height: 1.6; }
-        .main-nav { background: var(--blue); padding: 15px 5%; display: flex; flex-direction: column; align-items: center; }
-        .logo { color: white; text-decoration: none; font-weight: bold; margin-bottom: 10px; }
-        .nav-links a { color: white; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        :root { --blue-dark: #0d2c44; --blue-mid: #164366; --gold: #c5a059; --light: #f4f7f9; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background: var(--light); color: #333; line-height: 1.8; }
         
-        .content { padding: 40px 20px; max-width: 800px; margin: auto; }
-        .ceo-quote { border-left: 4px solid var(--gold); padding: 10px 20px; font-style: italic; font-size: 1.1rem; color: var(--blue); background: #f9f9f9; margin: 30px 0; }
-        h1 { color: var(--blue); font-size: 1.8rem; }
-        .value-card { background: #f4f7f6; padding: 25px; border-radius: 15px; margin-top: 25px; }
+        header { background: var(--blue-dark); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--gold); }
+        .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+        .logo span { color: var(--gold); }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; opacity: 0.8; }
+
+        /* Sección CEO / Trayectoria */
+        .ceo-container { padding: 60px 8%; max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
+        .ceo-text { flex: 1; min-width: 320px; }
+        .ceo-text h1 { color: var(--blue-dark); font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .ceo-image { flex: 1; min-width: 320px; position: relative; }
+        .ceo-image img { width: 100%; border-radius: 20px; box-shadow: 20px 20px 0px var(--gold); }
+
+        .highlight-box { background: var(--blue-dark); color: white; padding: 40px; border-radius: 20px; margin-top: 40px; }
+        .highlight-box h3 { color: var(--gold); margin-top: 0; }
         
-        @media (min-width: 768px) {
-            .main-nav { flex-direction: row; justify-content: space-between; }
-            h1 { font-size: 2.2rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 30px; text-align: center; }
+        .stat-item { border-right: 1px solid rgba(255,255,255,0.1); }
+        .stat-item:last-child { border-right: none; }
+        .stat-number { display: block; font-size: 1.8rem; font-weight: bold; color: var(--gold); }
+        
+        @media (max-width: 768px) {
+            .ceo-container { padding: 40px 20px; }
+            .ceo-image img { box-shadow: 10px 10px 0px var(--gold); }
+            .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
         }
     </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <a href="index.html" class="logo">Moisés Rosario <span style="color:var(--gold)">Lab</span></a>
-        <div class="nav-links">
+    <header>
+        <a href="index.html" class="logo">Moisés Rosario<span>.Lab</span></a>
+        <nav>
             <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Trayectoria</a>
-            <a href="servicios.html">Especialidades</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
             <a href="contacto.html">Ubicación</a>
+        </nav>
+    </header>
+
+    <main class="ceo-container">
+        <div class="ceo-text">
+            <h1>Liderazgo Técnico al Servicio de la Odontología</h1>
+            <p>En el Laboratorio <strong>Moisés Rosario</strong>, entendemos que cada dispositivo dental es una pieza crítica en la salud y autoestima del paciente. Nuestra trayectoria no se mide solo en años, sino en la precisión de los miles de casos resueltos satisfactoriamente para clínicas de todo el Estado Sucre.</p>
+            <p>Aplicamos el <strong>Protocolo Zero-Error</strong>, una metodología de inspección minuciosa que garantiza que cada prótesis o aparato de ortopedia funcional cumpla con los estándares anatómicos y mecánicos más exigentes antes de salir de nuestra sede en Carúpano.</p>
         </div>
-    </nav>
-    <article class="content">
-        <h1>Compromiso con la Excelencia Técnica</h1>
-        <p>Bajo la dirección técnica de <strong>Moisés Rosario</strong>, nuestro laboratorio se ha consolidado como un referente de fiabilidad en el oriente venezolano. Nuestra filosofía se basa en el <strong>Zero-Error Protocol</strong>.</p>
-        
-        <div class="ceo-quote">
-            "La mecánica dental no es solo fabricación, es ingeniería personalizada para la salud humana."
+        <div class="ceo-image">
+            <img src="../img/Sobrenosotros.webp" alt="Moisés Rosario Laboratorio">
         </div>
 
-        <div class="value-card">
-            <h3>Valores Éticos de Marca</h3>
-            <ul style="padding-left: 20px;">
-                <li><strong>Certificación de Materiales:</strong> Uso estricto de Dentalix y Acripoll.</li>
-                <li><strong>Puntualidad Crítica:</strong> Flujo de trabajo optimizado para entregas en 7 días.</li>
-                <li><strong>Soporte Técnico:</strong> Comunicación directa odontólogo-técnico.</li>
-            </ul>
-        </div>
-    </article>
+        <section class="highlight-box">
+            <h3>Nuestra Propuesta de Valor (CEO)</h3>
+            <p>Nos posicionamos como el aliado estratégico del odontólogo, ofreciendo no solo manufactura, sino asesoría técnica en la selección de materiales y diseño de aparatos complejos.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <small>Materiales Certificados</small>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">7 Días</span>
+                    <small>Tiempo de Entrega</small>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Eje Paria</span>
+                    <small>Cobertura Logística</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #999; font-size: 0.8rem;">
+        © 2026 Moisés Rosario - Excelencia en Prótesis y Ortopedia
+    </footer>
 </body>
 </html>
