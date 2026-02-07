@@ -3,51 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialidades Dentales | Prótesis y Ortopedia Sucre</title>
+    <title>Servicios | Moisés Rosario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Estilos de Nav idénticos a los anteriores */
-        :root { --blue: #0a3d62; --gold: #b38b4d; }
-        body { font-family: sans-serif; margin: 0; }
-        .main-nav { background: var(--blue); padding: 15px 5%; display: flex; flex-direction: column; align-items: center; }
-        .logo { color: white; text-decoration: none; font-weight: bold; margin-bottom: 10px; }
-        .nav-links a { color: white; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
-
-        .service-grid { padding: 40px 20px; max-width: 1000px; margin: auto; }
-        .item { display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px; background: #fff; border-bottom: 1px solid #eee; padding-bottom: 30px; }
-        .item img { width: 100%; height: 250px; border-radius: 15px; object-fit: cover; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .text h2 { color: var(--blue); font-size: 1.5rem; margin-top: 10px; }
+        :root { --blue-dark: #0d2c44; --gold: #c5a059; --white: #ffffff; }
+        body { font-family: sans-serif; margin: 0; background: #e9eff3; }
+        header { background: var(--blue-dark); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; }
         
-        @media (min-width: 768px) {
-            .main-nav { flex-direction: row; justify-content: space-between; }
-            .item { flex-direction: row; align-items: center; }
-            .item img { width: 350px; height: 250px; }
+        .container { padding: 50px 8%; max-width: 1100px; margin: auto; }
+        .section-header { margin-bottom: 40px; }
+        .section-header h2 { color: var(--blue-dark); font-size: 2.2rem; }
+
+        /* Tarjetas Estilo Imagen */
+        .service-card { 
+            background: white; border-radius: 20px; display: flex; overflow: hidden; 
+            margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); flex-wrap: wrap;
         }
+        .card-body { flex: 1; padding: 40px; min-width: 300px; }
+        .card-body h3 { color: var(--blue-dark); font-size: 1.6rem; margin-top: 0; }
+        .card-img { flex: 1; min-width: 300px; min-height: 250px; background-size: cover; background-position: center; }
+        
+        .btn-outline { border: 2px solid var(--gold); color: var(--gold); padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 15px; }
     </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <a href="index.html" class="logo">Moisés Rosario <span style="color:var(--gold)">Lab</span></a>
-        <div class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Trayectoria</a>
-            <a href="servicios.html">Especialidades</a>
-            <a href="contacto.html">Ubicación</a>
+    <div class="container">
+        <div class="section-header">
+            <h2>Nuestros Servicios</h2>
+            <p>Soluciones protésicas y ortopedia con respaldo técnico de primer nivel.</p>
         </div>
-    </nav>
-    <div class="service-grid">
-        <div class="item">
-            <img src="../img/rehabilitacion.jpeg" alt="Rehabilitación Oral Carúpano">
-            <div class="text">
-                <h2>Rehabilitación Protésica</h2>
-                <p>Implementamos <strong>polímeros de alta densidad</strong> (Dentalix/Acripoll) con porosidad nula. Esto garantiza una estética natural y una durabilidad superior frente a los ácidos orales.</p>
+
+        <div class="service-card">
+            <div class="card-body">
+                <h3>Prótesis y Rehabilitación</h3>
+                <p>Uso de acrílicos Dentalix y Acripoll para resultados de alta estética y durabilidad clínica comprobada.</p>
+                <a href="#" class="btn-outline">Más detalles</a>
             </div>
+            <div class="card-img" style="background-image: url('../img/rehabilitacion.jpeg');"></div>
         </div>
-        <div class="item">
-            <img src="../img/ortopedia.jpeg" alt="Ortopedia SN1 SN2">
-            <div class="text">
-                <h2>Ortopedia Funcional</h2>
-                <p>Confección de dispositivos <strong>SN1, SN2 y Bimler</strong> bajo análisis cefalométrico. Diseñados para una adaptación inmediata y mínima molestia para el paciente pediátrico.</p>
+
+        <div class="service-card">
+            <div class="card-body">
+                <h3>Ortopedia Funcional</h3>
+                <p>Especialistas en aparatos SN1, SN2 y sistemas Bimler. Precisión en cada ajuste para el éxito del tratamiento.</p>
+                <a href="#" class="btn-outline">Más detalles</a>
             </div>
+            <div class="card-img" style="background-image: url('../img/ortopedia.jpeg');"></div>
         </div>
     </div>
 </body>
