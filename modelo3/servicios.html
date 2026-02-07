@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios | Moisés Rosario</title>
+    <title>Servicios y Especialidades | Moisés Rosario</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --blue-dark: #0d2c44; --gold: #c5a059; --white: #ffffff; }
         body { font-family: sans-serif; margin: 0; background: #e9eff3; }
-        header { background: var(--blue-dark); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; }
         
+        header { background: var(--blue-dark); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--gold); }
+        .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+        .logo span { color: var(--gold); }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; opacity: 0.8; }
+        nav a:hover { opacity: 1; color: var(--gold); }
+
         .container { padding: 50px 8%; max-width: 1100px; margin: auto; }
-        .section-header { margin-bottom: 40px; }
+        .section-header { margin-bottom: 40px; text-align: center; }
         .section-header h2 { color: var(--blue-dark); font-size: 2.2rem; }
 
-        /* Tarjetas Estilo Imagen */
         .service-card { 
             background: white; border-radius: 20px; display: flex; overflow: hidden; 
             margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); flex-wrap: wrap;
@@ -23,21 +27,29 @@
         .card-body h3 { color: var(--blue-dark); font-size: 1.6rem; margin-top: 0; }
         .card-img { flex: 1; min-width: 300px; min-height: 250px; background-size: cover; background-position: center; }
         
-        .btn-outline { border: 2px solid var(--gold); color: var(--gold); padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 15px; }
+        @media (max-width: 768px) { header { flex-direction: column; } nav { margin-top: 15px; } }
     </style>
 </head>
 <body>
+    <header>
+        <a href="index.html" class="logo">Moisés Rosario<span>.Lab</span></a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Ubicación</a>
+        </nav>
+    </header>
+
     <div class="container">
         <div class="section-header">
-            <h2>Nuestros Servicios</h2>
-            <p>Soluciones protésicas y ortopedia con respaldo técnico de primer nivel.</p>
+            <h2>Nuestra Cartera de Servicios</h2>
         </div>
 
         <div class="service-card">
             <div class="card-body">
-                <h3>Prótesis y Rehabilitación</h3>
-                <p>Uso de acrílicos Dentalix y Acripoll para resultados de alta estética y durabilidad clínica comprobada.</p>
-                <a href="#" class="btn-outline">Más detalles</a>
+                <h3>Rehabilitación Protésica</h3>
+                <p>Prótesis totales y parciales removibles con acrílicos de alta densidad (Dentalix/Acripoll) para una estética natural.</p>
             </div>
             <div class="card-img" style="background-image: url('../img/rehabilitacion.jpeg');"></div>
         </div>
@@ -45,10 +57,17 @@
         <div class="service-card">
             <div class="card-body">
                 <h3>Ortopedia Funcional</h3>
-                <p>Especialistas en aparatos SN1, SN2 y sistemas Bimler. Precisión en cada ajuste para el éxito del tratamiento.</p>
-                <a href="#" class="btn-outline">Más detalles</a>
+                <p>Diseño y confección de aparatos SN1, SN2 y sistemas Bimler. Precisión milimétrica para tratamientos efectivos.</p>
             </div>
             <div class="card-img" style="background-image: url('../img/ortopedia.jpeg');"></div>
+        </div>
+
+        <div class="service-card">
+            <div class="card-body">
+                <h3>Especialidades</h3>
+                <p>Aparatología NAM para pacientes LPH, férulas de Michigan y dispositivos de ronquido/apnea.</p>
+            </div>
+            <div class="card-img" style="background-image: url('../img/especialidades.jpeg');"></div>
         </div>
     </div>
 </body>
