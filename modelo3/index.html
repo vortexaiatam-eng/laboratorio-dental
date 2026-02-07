@@ -6,26 +6,18 @@
     <title>Moisés Rosario | Ingeniería Dental</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --blue-dark: #0d2c44; --blue-mid: #164366; --gold: #c5a059; --light: #f4f7f9; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: var(--light); color: #333; }
-        
-        /* Header estilo Imagen */
-        header { background: var(--blue-dark); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--gold); }
+        :root { --blue-dark: #0d2c44; --gold: #c5a059; --white: #ffffff; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background: #f4f7f9; }
+        header { background: var(--blue-dark); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
         .logo { color: white; font-size: 1.5rem; font-weight: bold; text-decoration: none; }
         .logo span { color: var(--gold); }
-        nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; opacity: 0.8; transition: 0.3s; }
-        nav a:hover { opacity: 1; color: var(--gold); }
-
-        /* Hero Split */
-        .hero { display: flex; flex-wrap: wrap; min-height: 500px; background: var(--blue-dark); color: white; }
-        .hero-text { flex: 1; padding: 60px 8%; display: flex; flex-direction: column; justify-content: center; min-width: 300px; }
-        .hero-text h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 20px; }
-        .hero-img { flex: 1; background: url('../img/Sobrenosotros.webp') center/cover; min-height: 350px; position: relative; }
-        .hero-img::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 50px; background: linear-gradient(to right, var(--blue-dark), transparent); }
-
-        .btn-gold { background: var(--gold); color: var(--blue-dark); padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; width: fit-content; margin-top: 20px; }
-        
-        @media (max-width: 768px) { .hero-text h1 { font-size: 2rem; } }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .hero { display: flex; flex-wrap: wrap; min-height: 600px; background: var(--blue-dark); color: white; }
+        .hero-text { flex: 1; padding: 60px 8%; display: flex; flex-direction: column; justify-content: center; min-width: 320px; }
+        .hero-text h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero-img { flex: 1; background: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80') center/cover; min-height: 400px; }
+        .btn-gold { background: var(--gold); color: var(--blue-dark); padding: 15px 35px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; margin-top: 25px; }
+        @media (max-width: 768px) { header { flex-direction: column; gap: 10px; } .hero-text h1 { font-size: 2.2rem; } }
     </style>
 </head>
 <body>
@@ -40,9 +32,9 @@
     </header>
     <section class="hero">
         <div class="hero-text">
-            <h1>Ingeniería de Laboratorio Dental</h1>
-            <p>Especialistas en mecánica dental avanzada con protocolos de precisión garantizada en Carúpano.</p>
-            <a href="servicios.html" class="btn-gold">VER SERVICIOS</a>
+            <h1>Ingeniería Dental de Alta Precisión</h1>
+            <p>Laboratorio especializado en prótesis y ortopedia funcional con estándares de calidad internacional en Carúpano.</p>
+            <a href="servicios.html" class="btn-gold">DESCUBRE NUESTRO TRABAJO</a>
         </div>
         <div class="hero-img"></div>
     </section>
