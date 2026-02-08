@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Moisés Rosario | Laboratorio Dental Carúpano | Prótesis y Ortopedia</title>
+    <meta name="description" content="Moisés Rosario: Especialista en mecánica dental en Carúpano. Ofrecemos prótesis dentales de alta gama, ortopedia funcional y soluciones avanzadas para clínicas odontológicas en el Estado Sucre.">
+    <meta name="keywords" content="Moisés Rosario, laboratorio dental Carúpano, prótesis dentales Venezuela, ortopedia funcional, SN1, SN2, Bimler, mecánica dental Sucre">
+    <meta name="author" content="Moisés Rosario">
+    <meta name="geo.region" content="VE-R">
+    <meta name="geo.placename" content="Carúpano">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        :root {
+            --bg-color: #f0f2f5;
+            --neu-upper: #ffffff;
+            --neu-lower: #d1d9e6;
+            --brand-gold: #c5a059;
+        }
+
+        body { 
+            background-color: var(--bg-color); 
+            font-family: 'Quicksand', sans-serif; 
+            color: #3d4756;
+            overflow-x: hidden;
+        }
+
+        /* Neomorfismo Clásico */
+        .neu-flat {
+            background: var(--bg-color);
+            box-shadow: 10px 10px 20px var(--neu-lower), -10px -10px 20px var(--neu-upper);
+            border-radius: 24px;
+        }
+
+        .neu-inset {
+            background: var(--bg-color);
+            box-shadow: inset 6px 6px 12px var(--neu-lower), inset -6px -6px 12px var(--neu-upper);
+            border-radius: 20px;
+        }
+
+        .neu-button {
+            background: var(--bg-color);
+            box-shadow: 5px 5px 10px var(--neu-lower), -5px -5px 10px var(--neu-upper);
+            transition: all 0.3s ease;
+        }
+
+        .neu-button:hover {
+            box-shadow: 2px 2px 5px var(--neu-lower), -2px -2px 5px var(--neu-upper);
+            color: var(--brand-gold);
+        }
+
+        /* Parallax Light */
+        .parallax-light {
+            background-image: linear-gradient(rgba(240, 242, 245, 0.7), rgba(240, 242, 245, 0.85)), 
+                              url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body x-data="{ mobileMenu: false }">
+
+    <a href="https://wa.me/584248121610" class="fixed bottom-6 right-6 z-50 bg-[#25d366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition duration-300">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <nav class="fixed w-full z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto neu-flat px-6 py-4 flex justify-between items-center bg-[#f0f2f5]/80 backdrop-blur-md">
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-800 uppercase">Moisés <span class="text-[#c5a059]">Rosario</span></a>
+            
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-slate-500">
+                <a href="#inicio" class="hover:text-[#c5a059] transition">Inicio</a>
+                <a href="#servicios" class="hover:text-[#c5a059] transition">Servicios</a>
+                <a href="#garantia" class="hover:text-[#c5a059] transition">Garantía</a>
+                <a href="#contacto" class="text-[#c5a059]">Contacto</a>
+            </div>
+
+            <button @click="mobileMenu = !mobileMenu" class="md:hidden text-slate-600 p-2 neu-button rounded-lg">
+                <i class="fas fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <div x-show="mobileMenu" x-transition class="md:hidden mt-2 neu-flat p-6 flex flex-col space-y-4 text-center font-bold">
+            <a @click="mobileMenu = false" href="#inicio">Inicio</a>
+            <a @click="mobileMenu = false" href="#servicios">Servicios</a>
+            <a @click="mobileMenu = false" href="#garantia">Garantía</a>
+            <a @click="mobileMenu = false" href="#contacto" class="text-[#c5a059]">Contacto</a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="parallax-light min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="text-center animate__animated animate__fadeInUp">
+            <div class="neu-inset inline-block px-4 py-1 mb-6">
+                <span class="text-[#c5a059] font-bold text-[10px] tracking-[4px] uppercase">Estado Sucre • Venezuela</span>
+            </div>
+            <h1 class="text-4xl md:text-7xl font-bold text-slate-800 mb-6 leading-tight">
+                Mecánica Dental de <br><span class="text-[#c5a059] italic">Alta Fidelidad</span>
+            </h1>
+            <p class="text-slate-500 max-w-2xl mx-auto text-base md:text-lg mb-10 leading-relaxed">
+                Expertos en prótesis dentales y ortopedia funcional en Carúpano. Fusionamos técnica artesanal con innovación digital para resultados clínicos superiores.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#servicios" class="neu-button px-10 py-4 font-bold rounded-full text-slate-700">VER SERVICIOS</a>
+                <a href="https://wa.me/584248121610" class="bg-[#c5a059] text-white px-10 py-4 font-bold rounded-full shadow-lg hover:brightness-110 transition">SOLICITAR CASO</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-800 italic">Especialidades</h2>
+            <div class="w-16 h-1 bg-[#c5a059] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <article class="neu-flat p-5 group transition-all duration-500 hover:-translate-y-2">
+                <div class="neu-inset overflow-hidden mb-6 h-52">
+                    <img src="../img/rehabilitacion.jpeg" alt="Prótesis dentales de alta gama Carúpano" class="w-full h-full object-cover">
+                </div>
+                <div class="px-2 pb-2">
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Rehabilitación</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Prótesis totales y parciales con acrílicos Dentalix y Acripoll de máxima durabilidad.</p>
+                    <i class="fas fa-tooth text-[#c5a059] text-xl"></i>
+                </div>
+            </article>
+
+            <article class="neu-flat p-5 group transition-all duration-500 hover:-translate-y-2">
+                <div class="neu-inset overflow-hidden mb-6 h-52">
+                    <img src="../img/ortopedia.jpeg" alt="Ortopedia funcional SN1 SN2 Venezuela" class="w-full h-full object-cover">
+                </div>
+                <div class="px-2 pb-2">
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Ortopedia</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Sistemas funcionales SN1, SN2 y Bimler fabricados con precisión micrométrica.</p>
+                    <i class="fas fa-microscope text-[#c5a059] text-xl"></i>
+                </div>
+            </article>
+
+            <article class="neu-flat p-5 group transition-all duration-500 hover:-translate-y-2">
+                <div class="neu-inset overflow-hidden mb-6 h-52">
+                    <img src="../img/especialidades.jpeg" alt="Aparatología NAM LPH Carúpano" class="w-full h-full object-cover">
+                </div>
+                <div class="px-2 pb-2">
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Casos Especiales</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Moldeado nasoalveolar (NAM) y aparatología especializada para pacientes LPH.</p>
+                    <i class="fas fa-certificate text-[#c5a059] text-xl"></i>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="garantia" class="py-12 px-6">
+        <div class="max-w-7xl mx-auto neu-flat p-8 md:p-14 flex flex-col md:flex-row items-center justify-between border-r-8 border-[#c5a059]">
+            <div class="md:w-2/3 text-center md:text-left mb-8 md:mb-0">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4 uppercase italic tracking-tighter">Compromiso con el Especialista</h2>
+                <p class="text-slate-500 font-medium">Logística prioritaria y soporte técnico continuo para clínicas en todo el Eje de Paria y Cumaná.</p>
+            </div>
+            <a href="https://wa.me/584248121610" class="neu-button px-10 py-5 rounded-2xl font-bold text-[#c5a059] uppercase text-sm tracking-widest">Agendar Trabajo</a>
+        </div>
+    </section>
+
+    <footer id="contacto" class="py-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-800 mb-10 italic">Impulsa tu Clínica</h2>
+            
+            <div class="flex justify-center gap-6 md:gap-12 mb-16">
+                <a href="#" class="neu-button w-14 h-14 flex items-center justify-center rounded-full text-slate-400 hover:text-pink-500 transition"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="neu-button w-14 h-14 flex items-center justify-center rounded-full text-slate-400 hover:text-blue-600 transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="neu-button w-14 h-14 flex items-center justify-center rounded-full text-slate-400 hover:text-black transition"><i class="fab fa-tiktok text-xl"></i></a>
+            </div>
+
+            <div class="neu-inset p-8 inline-block w-full md:w-auto">
+                <p class="text-slate-600 font-bold mb-2">
+                    <i class="fas fa-location-dot text-[#c5a059] mr-2"></i> Calle San Felix, Edificio Sahara, Piso 2, Carúpano.
+                </p>
+                <p class="text-slate-400 text-[10px] tracking-[6px] uppercase italic">© 2026 Moisés Rosario Lab</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
