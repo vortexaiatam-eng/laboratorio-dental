@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moisés Rosario | Precision Dental Lab</title>
+    
+    <title>Moisés Rosario | Laboratorio Dental en Carúpano | Prótesis y Ortopedia</title>
+    <meta name="description" content="Moisés Rosario, experto en mecánica dental en Carúpano, Estado Sucre. Especialista en prótesis de alto impacto, ortopedia funcional SN1, SN2 y casos complejos LPH.">
+    <meta name="keywords" content="Moisés Rosario, Laboratorio Dental Carúpano, Mecánica Dental Sucre, Prótesis Dentalix, Ortopedia Bimler Venezuela, Odontología Carúpano">
+    <meta name="geo.region" content="VE-R">
+    <meta name="geo.placename" content="Carúpano">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -15,11 +21,7 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            dark: '#0f172a',
-                            gold: '#c5a059',
-                            accent: '#38bdf8'
-                        }
+                        brand: { dark: '#0f172a', gold: '#c5a059' }
                     }
                 }
             }
@@ -30,156 +32,128 @@
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gold-gradient { background: linear-gradient(135deg, #c5a059 0%, #947a44 100%); }
         
-        /* EFECTO PARALLAX */
-        .parallax-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.8)), 
+        /* PARALLAX REFECCIONADO */
+        .parallax-hero {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.7)), 
                               url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1920&q=80');
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            min-height: 80vh;
         }
 
-        /* BOTÓN FLOTANTE */
-        .btn-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-        .btn-float:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(34, 197, 94, 0.5); }
+        .btn-float { position: fixed; bottom: 30px; right: 30px; z-index: 1000; transition: 0.3s; }
     </style>
 </head>
 <body x-data="{ mobileMenu: false }" class="antialiased">
 
-    <a href="https://wa.me/584248121610" class="btn-float bg-green-500 w-16 h-16 rounded-full flex items-center justify-center text-white shadow-2xl">
+    <a href="https://wa.me/584248121610" class="btn-float bg-green-500 w-16 h-16 rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
     <nav class="fixed w-full z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-tighter">MOISÉS<span class="text-brand-gold">ROSARIO</span></a>
-            
-            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+        <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center text-white">
+            <a href="#" class="text-xl font-bold tracking-tighter uppercase">Moisés <span class="text-brand-gold">Rosario</span></a>
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
                 <a href="#inicio" class="hover:text-brand-gold transition">Inicio</a>
                 <a href="#servicios" class="hover:text-brand-gold transition">Servicios</a>
-                <a href="#nosotros" class="hover:text-brand-gold transition">Expertise</a>
+                <a href="#garantia" class="hover:text-brand-gold transition">Garantía</a>
                 <a href="#contacto" class="bg-brand-gold text-brand-dark px-4 py-2 rounded-lg font-bold">Contacto</a>
             </div>
-
-            <button @click="mobileMenu = !mobileMenu" class="md:hidden text-2xl">
-                <i class="fas fa-bars-staggered"></i>
-            </button>
+            <button @click="mobileMenu = !mobileMenu" class="md:hidden"><i class="fas fa-bars-staggered text-xl"></i></button>
         </div>
-
         <div x-show="mobileMenu" x-transition class="md:hidden mt-2 glass rounded-2xl p-6 flex flex-col space-y-4 text-center">
             <a @click="mobileMenu = false" href="#inicio">Inicio</a>
             <a @click="mobileMenu = false" href="#servicios">Servicios</a>
-            <a @click="mobileMenu = false" href="#nosotros">Expertise</a>
+            <a @click="mobileMenu = false" href="#garantia">Garantía</a>
             <a @click="mobileMenu = false" href="#contacto" class="text-brand-gold">Contacto</a>
         </div>
     </nav>
 
-    <section id="inicio" class="parallax-bg min-h-screen flex items-center px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section id="inicio" class="parallax-hero flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
             <div data-aos="fade-right">
-                <span class="inline-block px-4 py-1 rounded-full border border-brand-gold text-brand-gold text-xs font-bold mb-6 tracking-[3px]">ESTADO SUCRE, VENEZUELA</span>
+                <span class="inline-block px-4 py-1 rounded-full border border-brand-gold text-brand-gold text-xs font-bold mb-6">MECÁNICA DENTAL AVANZADA</span>
                 <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                    Mecánica Dental <br> de <span class="text-transparent bg-clip-text gold-gradient">Próxima Gen</span>
+                    Sonrisas que son <br> <span class="text-transparent bg-clip-text gold-gradient">Obras de Arte</span>
                 </h1>
-                <p class="text-gray-300 text-lg mb-8 max-w-lg">
-                    Fusionamos artesanía clínica con flujos digitales para ofrecer prótesis y ortopedia de máxima fidelidad.
+                <p class="text-gray-200 text-lg mb-8 max-w-lg">
+                    Laboratorio especializado en Carúpano. Calidad certificada en Prótesis y Ortopedia Funcional.
                 </p>
-                <div class="flex space-x-4">
-                    <a href="#servicios" class="gold-gradient text-brand-dark font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-gold/20 transition-transform hover:scale-105">
-                        Explorar Catálogo
-                    </a>
-                </div>
+                <a href="#servicios" class="gold-gradient text-brand-dark font-bold px-10 py-4 rounded-xl inline-block shadow-lg">VER ESPECIALIDADES</a>
             </div>
         </div>
     </section>
 
-    <section id="servicios" class="py-20 px-6 bg-slate-900/50">
+    <section id="servicios" class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold italic">Especialidades Técnicas</h2>
-                <div class="w-20 h-1 bg-brand-gold mx-auto mt-4"></div>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold uppercase">Nuestras Especialidades</h2>
+                <div class="w-24 h-1 gold-gradient mx-auto mt-4"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass overflow-hidden rounded-3xl" data-aos="fade-up">
-                    <img src="../img/rehabilitacion.jpeg" class="w-full h-48 object-cover opacity-80 group-hover:opacity-100 transition">
+                <div class="glass rounded-3xl overflow-hidden shadow-2xl" data-aos="fade-up">
+                    <img src="../img/rehabilitacion.jpeg" alt="Rehabilitación Protésica Carúpano" class="w-full h-56 object-cover">
                     <div class="p-8">
-                        <i class="fas fa-tooth text-3xl text-brand-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-4">Rehabilitación</h3>
-                        <p class="text-gray-400 text-sm">Prótesis totales y parciales con acrílicos de última generación.</p>
+                        <i class="fas fa-tooth text-brand-gold text-3xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">Rehabilitación</h3>
+                        <p class="text-gray-400 text-sm">Prótesis de alto impacto (Dentalix/Acripoll) con estética 100% natural.</p>
                     </div>
                 </div>
-
-                <div class="glass overflow-hidden rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-                    <img src="../img/ortopedia.jpeg" class="w-full h-48 object-cover opacity-80">
+                <div class="glass rounded-3xl overflow-hidden shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <img src="../img/ortopedia.jpeg" alt="Ortopedia Funcional Venezuela" class="w-full h-56 object-cover">
                     <div class="p-8">
-                        <i class="fas fa-microscope text-3xl text-brand-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-4">Ortopedia</h3>
-                        <p class="text-gray-400 text-sm">Sistemas SN1, SN2 y Bimler con ajuste micrométrico.</p>
+                        <i class="fas fa-microscope text-brand-gold text-3xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">Ortopedia</h3>
+                        <p class="text-gray-400 text-sm">Aparatología SN1, SN2 y Bimler con precisión técnica absoluta.</p>
                     </div>
                 </div>
-
-                <div class="glass overflow-hidden rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                    <img src="../img/especialidades.jpeg" class="w-full h-48 object-cover opacity-80">
+                <div class="glass rounded-3xl overflow-hidden shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <img src="../img/especialidades.jpeg" alt="Casos Especiales NAM LPH" class="w-full h-56 object-cover">
                     <div class="p-8">
-                        <i class="fas fa-certificate text-3xl text-brand-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold mb-4">Especialidades</h3>
-                        <p class="text-gray-400 text-sm">Protocolos avanzados para moldeado nasoalveolar (NAM).</p>
+                        <i class="fas fa-award text-brand-gold text-3xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">Casos Especiales</h3>
+                        <p class="text-gray-400 text-sm">Moldeadores nasoalveolares (NAM) y prótesis para pacientes LPH.</p>
                     </div>
-                </div>
-
-                <div id="nosotros" class="gold-gradient p-8 rounded-3xl text-brand-dark md:col-span-3 flex flex-col md:flex-row justify-between items-center" data-aos="zoom-in">
-                    <div class="text-center md:text-left mb-6 md:mb-0">
-                        <h3 class="text-3xl font-black mb-2 uppercase">¿Necesitas un caso urgente?</h3>
-                        <p class="font-bold opacity-80 uppercase tracking-widest">Logística prioritaria para el Eje de Paria y Cumaná.</p>
-                    </div>
-                    <a href="https://wa.me/584248121610" class="bg-brand-dark text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition">
-                        CONTACTAR AHORA
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contacto" class="py-20 px-6">
-        <div class="max-w-7xl mx-auto glass rounded-3xl p-12 text-center">
-            <h2 class="text-4xl font-bold mb-6 italic text-brand-gold">Impulsa tu Clínica</h2>
-            <p class="text-gray-400 mb-10 max-w-xl mx-auto">Moisés Rosario - Director Técnico. Ubicados en Carúpano, Edificio Sahara. Calidad certificada en cada pieza.</p>
+    <section id="garantia" class="py-20 px-6 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto gold-gradient rounded-[40px] p-12 text-brand-dark flex flex-col md:flex-row justify-between items-center">
+            <div class="md:w-2/3 mb-8 md:mb-0">
+                <h2 class="text-4xl font-black uppercase mb-4">Logística y Garantía</h2>
+                <p class="text-lg font-bold italic opacity-90">Entregas prioritarias para clínicas en Carúpano, Cumaná y todo el Eje de Paria. Materiales certificados y procesos de esterilización clínica.</p>
+            </div>
+            <a href="https://wa.me/584248121610" class="bg-brand-dark text-white px-8 py-5 rounded-2xl font-black tracking-widest hover:scale-105 transition">SOLICITAR CASO</a>
+        </div>
+    </section>
+
+    <footer id="contacto" class="py-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto glass p-12 rounded-[50px]">
+            <h2 class="text-5xl font-bold italic text-brand-gold mb-8 italic">Impulsa tu Clínica</h2>
+            <p class="text-gray-300 text-lg mb-12 italic">Moisés Rosario - Director Técnico de Mecánica Dental. Precisión que genera confianza.</p>
             
-            <div class="flex justify-center space-x-8 text-3xl mb-12 text-gray-300">
-                <a href="#" class="hover:text-brand-gold transition"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-brand-gold transition"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="hover:text-brand-gold transition"><i class="fab fa-tiktok"></i></a>
-                <a href="https://wa.me/584248121610" class="hover:text-brand-gold transition"><i class="fab fa-whatsapp"></i></a>
+            <div class="flex justify-center space-x-10 text-3xl mb-12">
+                <a href="#" aria-label="Instagram" class="hover:text-brand-gold"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook" class="hover:text-brand-gold"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="TikTok" class="hover:text-brand-gold"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/584248121610" aria-label="WhatsApp" class="hover:text-brand-gold"><i class="fab fa-whatsapp"></i></a>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6 border-t border-white/10 pt-10">
-                <a href="mailto:tu-correo@ejemplo.com" class="flex items-center space-x-3 text-lg hover:text-brand-gold transition">
-                    <i class="fas fa-envelope"></i>
-                    <span>contacto@moisesrosario.lab</span>
-                </a>
-                <div class="hidden md:block w-px h-6 bg-white/20"></div>
-                <p class="flex items-center space-x-3 text-lg">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Edificio Sahara, Carúpano</span>
+            <div class="border-t border-white/10 pt-10 text-gray-400">
+                <p class="flex items-center justify-center gap-2 mb-4">
+                    <i class="fas fa-map-marker-alt text-brand-gold"></i> Edificio Sahara, Piso 2, Carúpano, Estado Sucre.
                 </p>
-            </div>
-            <div class="mt-12 text-xs text-gray-500 tracking-widest">
-                &copy; 2026 MOISÉS ROSARIO LAB. INNOVACIÓN DENTAL.
+                <p class="text-xs uppercase tracking-[5px]">&copy; 2026 Moisés Rosario Lab</p>
             </div>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-    </script>
+    <script> AOS.init({ duration: 1000, once: true }); </script>
 </body>
 </html>
