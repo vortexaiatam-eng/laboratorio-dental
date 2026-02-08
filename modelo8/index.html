@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moisés Rosario | Dental Studio | Modelo 6</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+    <style>
+        :root { --bg: #f0f2f5; --upper: #ffffff; --lower: #d1d9e6; --gold: #c5a059; }
+        body { background: var(--bg); font-family: 'Quicksand', sans-serif; color: #3d4756; }
+        .neu-flat { background: var(--bg); box-shadow: 10px 10px 20px var(--lower), -10px -10px 20px var(--upper); border-radius: 30px; }
+        .neu-inset { background: var(--bg); box-shadow: inset 6px 6px 12px var(--lower), inset -6px -6px 12px var(--upper); border-radius: 20px; }
+        .neu-button { background: var(--bg); box-shadow: 5px 5px 10px var(--lower), -5px -5px 10px var(--upper); transition: 0.3s; }
+        .parallax-light {
+            background-image: linear-gradient(rgba(240, 242, 245, 0.7), rgba(240, 242, 245, 0.85)), 
+                              url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80');
+            background-attachment: fixed; background-position: center; background-size: cover;
+        }
+    </style>
+</head>
+<body x-data="{ mobileMenu: false }">
+
+    <a href="https://wa.me/584248121610" class="fixed bottom-6 right-6 z-50 bg-[#25d366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <nav class="fixed w-full z-50 px-4 py-4">
+        <div class="max-w-7xl mx-auto neu-flat px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-bold text-slate-800 uppercase tracking-tighter">Moisés <span class="text-[#c5a059]">Rosario</span></a>
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase text-slate-500">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto" class="text-[#c5a059]">Contacto</a>
+            </div>
+            <button @click="mobileMenu = !mobileMenu" class="md:hidden neu-button p-2 rounded-lg text-[#c5a059]"><i class="fas fa-bars"></i></button>
+        </div>
+        <div x-show="mobileMenu" x-transition class="md:hidden mt-2 neu-flat p-6 flex flex-col space-y-4 text-center font-bold">
+            <a @click="mobileMenu = false" href="#inicio">Inicio</a>
+            <a @click="mobileMenu = false" href="#nosotros">Nosotros</a>
+            <a @click="mobileMenu = false" href="#servicios">Servicios</a>
+            <a @click="mobileMenu = false" href="#contacto" class="text-[#c5a059]">Contacto</a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="parallax-light min-h-screen flex items-center justify-center px-6">
+        <div class="text-center animate__animated animate__fadeIn">
+            <h1 class="text-4xl md:text-7xl font-bold text-slate-800 mb-6">Mecánica Dental <br><span class="text-[#c5a059] italic">de Próxima Gen</span></h1>
+            <p class="text-slate-500 max-w-xl mx-auto mb-10 font-medium">Estética y precisión en el corazón de Carúpano.</p>
+            <a href="#servicios" class="neu-button px-10 py-4 font-bold rounded-full text-slate-700">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <section id="nosotros" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="neu-flat p-8 md:p-16 grid md:grid-cols-2 gap-16 items-center">
+                <div class="flex justify-center" data-aos="zoom-in">
+                    <div class="p-4 neu-flat rounded-full">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden neu-inset border-8 border-[#f0f2f5]">
+                            <img src="../img/perfil.jpeg" alt="Moisés Rosario" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <span class="text-[#c5a059] font-black text-xs tracking-widest uppercase mb-4 block">Dirección Técnica</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6 italic">Moisés Rosario</h2>
+                    <p class="text-slate-500 text-lg leading-relaxed mb-8">
+                        Lidero un laboratorio donde la biomecánica se encuentra con el arte. Cada pieza es un proyecto único, garantizando una comunicación fluida entre el clínico y el técnico.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="neu-inset px-6 py-2 text-xs font-bold text-slate-600">Bio-Estética Avanzada</span>
+                        <span class="neu-inset px-6 py-2 text-xs font-bold text-slate-600">Ortopedia Funcional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <article class="neu-flat p-6 group">
+                <div class="neu-inset overflow-hidden h-48 mb-6"><img src="../img/rehabilitacion.jpeg" class="w-full h-full object-cover"></div>
+                <h3 class="text-xl font-bold mb-2">Rehabilitación</h3>
+                <p class="text-slate-400 text-sm italic">Prótesis fijas y removibles de alto impacto.</p>
+            </article>
+            <article class="neu-flat p-6 group">
+                <div class="neu-inset overflow-hidden h-48 mb-6"><img src="../img/ortopedia.jpeg" class="w-full h-full object-cover"></div>
+                <h3 class="text-xl font-bold mb-2">Ortopedia</h3>
+                <p class="text-slate-400 text-sm italic">Sistemas SN1, SN2 y Bimler.</p>
+            </article>
+            <article class="neu-flat p-6 group">
+                <div class="neu-inset overflow-hidden h-48 mb-6"><img src="../img/especialidades.jpeg" class="w-full h-full object-cover"></div>
+                <h3 class="text-xl font-bold mb-2">Especialidades</h3>
+                <p class="text-slate-400 text-sm italic">Aparatología NAM y casos LPH.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer id="contacto" class="py-24 px-6 text-center">
+        <h2 class="text-4xl font-bold text-slate-800 mb-10 italic uppercase">Impulsa tu Clínica</h2>
+        <div class="flex justify-center gap-8 mb-16">
+            <a href="#" class="neu-button w-12 h-12 flex items-center justify-center rounded-full text-slate-500 hover:text-[#c5a059] transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="neu-button w-12 h-12 flex items-center justify-center rounded-full text-slate-500 hover:text-[#c5a059] transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/584248121610" class="neu-button w-12 h-12 flex items-center justify-center rounded-full text-[#25d366] transition"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="text-slate-400 text-[10px] tracking-[5px] uppercase italic">© 2026 MOISÉS ROSARIO LAB</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init({ duration: 1000, once: true }); </script>
+</body>
+</html>
