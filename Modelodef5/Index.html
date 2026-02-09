@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moisés Rosario | Laboratorio de Mecánica Dental en Carúpano</title>
+    
+    <meta name="description" content="Moisés Rosario: Especialista en prótesis Dentalix, Acripoll y ortopedia funcional en Carúpano. Servicio técnico dental profesional con envíos nacionales.">
+    <meta name="keywords" content="Mecánica dental Carúpano, Laboratorio dental Sucre, Moisés Rosario, Prótesis dentales Venezuela, Ortopedia SN1, Aparatos NAM">
+    <meta name="geo.placename" content="Carúpano, Sucre, Venezuela">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --azul-profundo: #0056b3; 
+            --azul-intermedio: #007bff;
+            --azul-claro: #eef6ff; 
+            --blanco: #ffffff; 
+            --gris: #333; 
+            --gris-suave: #666;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--gris); line-height: 1.6; background-color: #fcfcfc; }
+        
+        /* Navegación */
+        header { 
+            display: flex; 
+            justify-content: space-between;
+            align-items: center; 
+            padding: 15px 8%; 
+            background: var(--blanco); 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .logo-area { display: flex; align-items: center; }
+        header img { height: 50px; margin-right: 15px; }
+        nav a { margin-left: 20px; text-decoration: none; color: var(--gris); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--azul-profundo); }
+        .btn-blog { color: var(--azul-intermedio); border: 1px solid var(--azul-intermedio); padding: 5px 15px; border-radius: 20px; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, var(--azul-claro) 0%, #d1e6ff 100%); padding: 100px 5%; text-align: center; }
+        .hero h1 { color: var(--azul-profundo); font-size: 2.8rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; color: var(--gris-suave); }
+        .cta-button { background: var(--azul-profundo); color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,86,179,0.3); transition: 0.3s; }
+        .cta-button:hover { background: #004494; transform: scale(1.05); }
+
+        /* Nosotros */
+        .about { padding: 80px 8%; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; background: white; }
+        .about-image { flex: 1; min-width: 300px; }
+        .about-image img { width: 100%; border-radius: 15px; box-shadow: 20px 20px 0px var(--azul-claro); }
+        .about-text { flex: 1.2; min-width: 300px; }
+        .about-text h2 { color: var(--azul-profundo); font-size: 2rem; }
+        .profile-box { background: var(--azul-claro); padding: 20px; border-left: 5px solid var(--azul-profundo); margin-top: 25px; border-radius: 0 10px 10px 0; }
+
+        /* Servicios */
+        .services { padding: 80px 5%; background: #f4f7fa; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { border-radius: 12px; padding: 30px; transition: 0.4s; background: var(--blanco); box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,86,179,0.1); }
+        .card i { font-size: 2.5rem; color: var(--azul-intermedio); margin-bottom: 20px; }
+        .card h3 { color: var(--azul-profundo); margin-bottom: 15px; }
+        .card ul { text-align: left; padding-left: 20px; margin-bottom: 25px; color: var(--gris-suave); }
+        .btn-detail { font-size: 0.8rem; color: var(--azul-profundo); font-weight: bold; text-decoration: none; text-transform: uppercase; border-bottom: 2px solid var(--azul-claro); }
+
+        /* Sección de Detalles (Uso Clínico) */
+        .details-section { padding: 80px 8%; background: var(--blanco); }
+        .detail-item { margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
+        .detail-item h4 { color: var(--azul-profundo); font-size: 1.4rem; margin-bottom: 10px; }
+        .detail-tag { background: var(--azul-claro); color: var(--azul-profundo); padding: 3px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: bold; }
+
+        /* FAQ */
+        .faq { padding: 80px 8%; background: #f9f9f9; }
+        .faq-grid { max-width: 800px; margin: 0 auto; }
+        .faq-item { margin-bottom: 15px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .faq-item strong { color: var(--azul-profundo); display: block; margin-bottom: 8px; font-size: 1.1rem; }
+
+        /* Footer */
+        footer { background: #002d5f; color: white; text-align: center; padding: 50px 5%; }
+        .social-links { margin: 20px 0; }
+        .social-links a { color: white; margin: 0 15px; font-size: 24px; transition: 0.3s; }
+        .social-links a:hover { color: var(--azul-claro); }
+        
+        .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); text-decoration: none; z-index: 1000; transition: 0.3s; }
+        .whatsapp-btn:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            nav { margin-top: 15px; }
+            nav a { margin: 0 10px; font-size: 0.8rem; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="img/logo.png" alt="Moisés Rosario Logo">
+            <h2 style="font-size: 1.2rem; margin:0;">Moisés Rosario</h2>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#faq">Preguntas</a>
+            <a href="blog.html" class="btn-blog">Blog</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Excelencia en Prótesis y Ortopedia</h1>
+        <p>Combinamos tecnología de vanguardia y destreza artesanal para ofrecer resultados clínicos de máxima precisión en Carúpano.</p>
+        <a href="https://wa.me/584248121610" class="cta-button">Solicitar Presupuesto</a>
+    </section>
+
+    <section id="nosotros" class="about">
+        <div class="about-image">
+            <img src="img/laboratorio.jpg" alt="Laboratorio Dental">
+        </div>
+        <div class="about-text">
+            <h2>Sobre Nosotros</h2>
+            <p>Nuestro laboratorio se ha consolidado como un referente de calidad en el Oriente del país. Nos especializamos en ser el aliado estratégico del odontólogo, garantizando puntualidad y fidelidad en cada impresión recibida.</p>
+            
+            <div class="profile-box">
+                <h3 style="margin-top:0; color:var(--azul-profundo)">Moisés Rosario <small>(Técnico Dental)</small></h3>
+                <p style="margin-bottom:0;">Con años de formación técnica especializada, Moisés lidera cada proceso de fabricación, desde el análisis del modelo hasta el pulido final, asegurando que cada aparato cumpla con los requerimientos biomecánicos del paciente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <div class="section-title">
+            <h2>Nuestras Especialidades</h2>
+            <p>Haz clic para ver más detalles técnicos</p>
+        </div>
+        <div class="service-grid">
+            <div class="card">
+                <i class="fas fa-tooth"></i>
+                <h3>Rehabilitación</h3>
+                <ul>
+                    <li>Prótesis Totales y Parciales</li>
+                    <li>Sistemas Dentalix y Acripoll</li>
+                    <li>Provisionales Estéticos</li>
+                </ul>
+                <a href="#uso-rehabilitacion" class="btn-detail">Ver tipos y uso <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="card">
+                <i class="fas fa-microscope"></i>
+                <h3>Ortopedia</h3>
+                <ul>
+                    <li>Aparatos SN1, SN2 y Bimler</li>
+                    <li>Expansores Quad Helix</li>
+                    <li>Retenedores Essix y Hawley</li>
+                </ul>
+                <a href="#uso-ortopedia" class="btn-detail">Ver tipos y uso <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="card">
+                <i class="fas fa-certificate"></i>
+                <h3>Casos Especiales</h3>
+                <ul>
+                    <li>Aparatos NAM (Moldeo Nasoalveolar)</li>
+                    <li>Pacientes pediátricos LPH</li>
+                    <li>Férulas Michigan</li>
+                </ul>
+                <a href="#uso-especiales" class="btn-detail">Ver tipos y uso <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="details-section">
+        <div id="uso-rehabilitacion" class="detail-item">
+            <span class="detail-tag">REHABILITACIÓN</span>
+            <h4>Prótesis de Alta Gama</h4>
+            <p><strong>Uso:</strong> Indicadas para la reposición de piezas dentales perdidas. Utilizamos acrílicos de alto impacto que ofrecen una mayor resistencia a la fractura y una porosidad mínima, lo que evita la acumulación de bacterias y olores.</p>
+        </div>
+
+        <div id="uso-ortopedia" class="detail-item">
+            <span class="detail-tag">ORTOPEDIA</span>
+            <h4>Aparatología Funcional (SN1, SN2, Bimler)</h4>
+            <p><strong>Uso:</strong> Estos dispositivos se utilizan para corregir maloclusiones en etapas de crecimiento. El aparato <strong>SN1</strong> es ideal para estimular el avance mandibular, mientras que el <strong>Bimler</strong> permite una gran movilidad lingual, mejorando la función fonética durante el tratamiento.</p>
+        </div>
+
+        <div id="uso-especiales" class="detail-item">
+            <span class="detail-tag">ESPECIALIDADES</span>
+            <h4>Sistemas NAM y Férulas</h4>
+            <p><strong>Uso:</strong> Los moldeadores <strong>NAM</strong> son cruciales para el tratamiento pre-quirúrgico de bebés con Labio y Paladar Hendido (LPH). Las <strong>Férulas Michigan</strong> se aplican en pacientes con bruxismo severo para proteger la articulación temporomandibular (ATM).</p>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2 style="text-align:center; color: var(--azul-profundo); margin-bottom:40px;">Preguntas Frecuentes</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <strong>¿Cuál es el tiempo de entrega?</strong>
+                Garantizamos la entrega de la mayoría de los trabajos en 1 semana (7 días hábiles).
+            </div>
+            <div class="faq-item">
+                <strong>¿Realizan envíos a otras ciudades?</strong>
+                Sí, recibimos impresiones y enviamos trabajos terminados a todo el país a través de servicios de mensajería (MRW, Zoom, Tealca).
+            </div>
+            <div class="faq-item">
+                <strong>¿Con qué materiales trabajan?</strong>
+                Solo utilizamos insumos certificados de alta gama, principalmente las líneas Dentalix y Acripoll para garantizar durabilidad.
+            </div>
+            <div class="faq-item">
+                <strong>¿Cómo solicito un trabajo desde otra clínica?</strong>
+                Puede contactarnos por WhatsApp para coordinar el envío de los modelos y las especificaciones técnicas del caso.
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/584248121610" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <h3>Moisés Rosario</h3>
+        <p>Calle San Felix, Edificio Sahara, Piso 2, Carúpano, Estado Sucre.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Moisés Rosario Técnico Dental. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
 
